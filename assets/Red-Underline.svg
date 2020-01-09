@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="170px" height="20px" viewBox="0 0 170 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.3 (67297) - http://www.bohemiancoding.com/sketch -->
+    <title>wave</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="wave" transform="translate(0.000000, 4.000000)" stroke="#FF5F57" stroke-width="6.165">
+            <path d="M0,0 C7.08266667,0 7.08266667,12 14.1666667,12 C21.2506667,12 21.249,0 28.3333333,0 C35.4176667,0 35.417,12 42.5,12 C49.583,12 49.5826667,0 56.6666667,0 C63.7506667,0 63.7503333,12 70.8333333,12 C77.9163333,12 77.9163333,0 85,0 C92.0836667,0 92.0826667,12 99.1666667,12 C106.250667,12 106.249,0 113.333333,0 C120.417667,0 120.417,12 127.5,12 C134.583,12 134.582667,0 141.666667,0 C148.750667,0 148.750333,12 155.833333,12 C162.916333,12 162.916333,0 170,0" id="Path"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="33.77210628861292" width="33.68437057108076">
+  <defs>
+    <rect id="rect-1" opacity="1" x="5.873720876397101" y="5.849262943263483" width="21.93692881828656" height="22.073580402085952"/>
+  </defs>
+  <g transform="translate(16.84218528554038, 16.88605314430646) rotate(18.000006436155008) translate(-16.84218528554038, -16.88605314430646)" opacity="1">
+    <use xlink:href="#rect-1" fill-opacity="0" stroke="rgb(68,242,92)" stroke-opacity="1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
