@@ -40,8 +40,7 @@
       property="twitter:image"
       content="https://i.ibb.co/br1K19R/Preview-Image.jpg"
     />
-    <!-- Generate your favicons with Favicon io "https://favicon.io/" -->
-
+    
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -51,32 +50,56 @@
     <!-- My StyleSheet CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    <!-- Rubik Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700&display=swap" rel="stylesheet">
+
     <!-- Anime Js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     
     <!-- My Javascript  -->
-    <script src="scripts.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+
 
 </head>
 <body style="height: 100vh;" onload="pageLoaded()">
 
-    <br>
-    <br>
+  <div>
+    <div style="display: flex; flex-direction: column; justify-content: center; height: 50%" >
+      <div style="display: flex; justify-content: center;">
+        <div class="alexLetters">A</div>
+        <div class="alexLetters">L</div>
+      </div>
+      <div style="display: flex; justify-content: center; line-height: 4px;">
+        <div class="alexLetters">E</div>  
+        <div class="alexLetters">X</div>
+      </div>
+    </div>
+  </div>
+    
+  
+  <div>
+
+
+
+      <h3>Alex Leybourne</h3>
+
+    </div>
 
     <div style="display: flex; flex-direction: column; justify-content: center; height: 50%" >
-        <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true" style="display: flex; justify-content: center;">
-            <img data-tilt data-tilt-scale="1.1" class="floatAnimation" src="assets/Small-Blue-Squiggle.svg" style="height: 40px; position: relative; z-index: 4; left: 280px; top: 300px;">
-            <img src="assets/AlexLeybourne.png" style="height: 400px; position: absolute; z-index: 3;">
-            <img data-tilt data-tilt-scale="1.1" class="spinAnimation" src="assets/Red-triangle.svg" style="height: 200px; position: relative; z-index: 2; left: 100px;">
-            <img data-tilt data-tilt-scale="1.1" class="spinAnimation" src="assets/Green-square.svg" style="height: 100px; position: relative; z-index: 1; top: 170px; left: -300px;">
+        <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true" data-tilt-glare data-tilt-max-glare="0.8" style="display: flex; justify-content: center;">
+            <img class="floatAnimation" src="assets/Small-Blue-Squiggle.svg" style="height: 40px; position: relative; z-index: 4; left: 280px; top: 300px;">
+            <img src="https://res.cloudinary.com/djic27lvo/image/upload/v1571362205/Alex_Leybourne_Resume_2019_odoy9w.png" style="height: 400px; position: absolute; z-index: 3;">
+            <img class="spinAnimation" src="assets/Red-triangle.svg" style="height: 200px; position: relative; z-index: 2; left: 100px;">
+            <img class="spinAnimation" src="assets/Green-square.svg" style="height: 100px; position: relative; z-index: 1; top: 170px; left: -300px;">
         </div>
     </div>
 
     <img class="animeTest" src="assets/Red-triangle.svg">
 
     <!-- Tilt JS -->
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
-    
+    <script type="text/javascript" src="scripts/vanilla-tilt.js"></script>
+
 </body>
 </html>
 
