@@ -1,7 +1,6 @@
 
 function pageLoaded() {
-
-
+  
   console.log('Yeet')
 
   let animation = anime({
