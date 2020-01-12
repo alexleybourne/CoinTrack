@@ -10,8 +10,9 @@ function pageLoaded() {
     opacity: 1,
     height: 200,
     width: 200,
-    delay: anime.stagger(400),
-    duration: 100
+    rotate: 0,
+    delay: anime.stagger(200),
+    duration: 2000
     }) 
 
 }
