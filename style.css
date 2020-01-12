@@ -3,7 +3,66 @@
 }
 
 .alexLetters {
-  font-weight: bold;
-  font-size: 200px;
-  margin: 16px;
+  opacity: 0;
+  cursor: default;
+  transition: 1s;
+  height: 100px;
+  line-height: 4px;
+  margin: 20px;
+  padding: 0;
+}
+
+.sticker {
+
+  width: 110px;
+
+  height: 110px;
+
+}
+
+.example-1 {
+  width: 130px;
+  height: 130px;
+}
+  
+  
+.example-1 .sticker-img {
+  
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZGhCCOsR9ZWD1VE6lVEzSHKE0BipFMuC0NpfLu3Q9yQjTRENA&s);
+  background-position: center;
+  background-size: 140px;
+  
+}
+  
+  
+.example-2 .sticker-img {
+
+  background-image: url(https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png);
+  
+  background-position: center;
+  background-size: 140px;
+  transform: rotate(25deg);
+  
+}
+
+.example-3 {
+  width: 100px;
+  height: 100px;
+}
+
+.example-3 .sticker-img {
+
+  background-image: url(https://cnet3.cbsistatic.com/img/Yt768C55hXNi2eGSB9qOv-e7SQg=/2011/03/16/c7675aa8-fdba-11e2-8c7c-d4ae52e62bcc/Chrome-logo-2011-03-16.jpg);
+  
+  background-position: center;
+  background-size: 140px;
+  transform: rotate(-45deg);
+  
+}
+  
+  
+.example-2 .sticker-shadow {
+  
+  opacity: 0.6;
+  
 }
