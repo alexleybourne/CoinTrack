@@ -65,19 +65,22 @@
 
 </head>
 <body onload="pageLoaded()">  
-  <div style="display: flex; justify-content: center; justify-content: space-around; height: 100vh;">
 
+  <div style="display: flex; justify-content: center; justify-content: space-around; height: 100vh;">
     <!-- Alex Text -->
-    <div style="display: flex; flex-direction: column; justify-content: center; height: 90%" >
+    <div style="display: flex; flex-direction: column; justify-content: center; height: 90%"  class="logo" id="logo">
       <div style="display: flex; justify-content: center;">
-        <img src="src/A.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters">
-        <img src="src/L.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters">
+        <img src="src/A.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters" id="alexLetters">
+        <img src="src/L.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters" id="alexLetters">
       </div>
       <div style="display: flex; justify-content: center; line-height: 4px;">
-        <img src="src/E.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters">  
-        <img src="src/X.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters">
+        <img src="src/E.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters" id="alexLetters">  
+        <img src="src/X.svg" data-tilt data-tilt-scale="1.1" data-tilt-reverse="true" class="alexLetters" id="alexLetters">
       </div>
     </div>
+  </div>
+
+  <div class="navBar">
 
   </div>
 
@@ -103,13 +106,13 @@
   </div> -->
     
   
-  <div>
+  <div id="myDIV" style="height: 100vh;">
 
-
+<button onclick="navAnimation()">Test</button>
 
       <h3>Alex Leybourne</h3>
 
-    </div>
+  </div>
 
     <div style="display: flex; flex-direction: column; justify-content: center; height: 50%" >
         <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true" data-tilt-glare data-tilt-max-glare="0.8" style="display: flex; justify-content: center;">

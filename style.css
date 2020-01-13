@@ -11,37 +11,19 @@
   padding: 0;
 }
 
-.sticker {
-
-  width: 110px;
-
-  height: 110px;
-
+.navBar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.897);
 }
 
 .example-1 {
   width: 130px;
   height: 130px;
-}
-  
-  
-.example-1 .sticker-img {
-  
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZGhCCOsR9ZWD1VE6lVEzSHKE0BipFMuC0NpfLu3Q9yQjTRENA&s);
-  background-position: center;
-  background-size: 140px;
-  
-}
-  
-  
-.example-2 .sticker-img {
-
-  background-image: url(https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png);
-  
-  background-position: center;
-  background-size: 140px;
-  transform: rotate(25deg);
-  
 }
 
 .example-3 {
