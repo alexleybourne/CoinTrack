@@ -16,12 +16,20 @@ window.addEventListener('scroll', function() {
   landingHeight = document.getElementById('landingArea').offsetHeight
   areaHeight = landingHeight / 3
 
-  // Bring In Animations
+  // At Top of Page
   if (scrollPosition < areaHeight) {
 
+    // Nav Slide out
     document.getElementById("navBar").classList.remove("navBar")
     document.getElementById("navBar").classList.add("navBarHidden")
 
+    let navletters = document.querySelectorAll('.rotate-in')
+    for (var i = 0; i < navletters.length; i++) {
+        navletters[i].classList.remove("rotate-in")
+        navletters[i].classList.add("rotate-out")
+    }
+
+    // Big Letters Animate in
     let letters = document.querySelectorAll('.rotate-fade-out')
     for (var i = 0; i < letters.length; i++) {
         letters[i].classList.add("rotate-fade-in")
@@ -30,12 +38,20 @@ window.addEventListener('scroll', function() {
 
   }
 
-  // Hide Animations
+  // Scroll off top
   if (scrollPosition > areaHeight) {
 
+    // Nav Slide in
     document.getElementById("navBar").classList.remove("navBarHidden")
     document.getElementById("navBar").classList.add("navBar")
 
+    let navletters = document.querySelectorAll('.rotate-out')
+    for (var i = 0; i < navletters.length; i++) {
+        navletters[i].classList.add("rotate-in")
+        navletters[i].classList.remove("rotate-out")
+    }
+
+    // Big Letters Animate out
     let letters = document.querySelectorAll('.rotate-fade-in')
     for (var i = 0; i < letters.length; i++) {
         letters[i].classList.remove("rotate-fade-in")

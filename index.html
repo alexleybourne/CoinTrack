@@ -63,28 +63,34 @@
     <!-- Alex Text -->
     <div style="display: flex; flex-direction: column; justify-content: center; height: 90%"  class="logo" id="logo">
       <div style="display: flex; justify-content: center;">
-        <img src="src/A.svg" class="alexLetters rotate-fade-in" id="alexLetters">
-        <img src="src/L.svg" class="alexLetters rotate-fade-in" style="animation-delay: 2s; -webkit-animation-delay: 0.1s;" id="alexLetters">
+        <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true"><img src="src/A.svg" class="alexLetters rotate-fade-in" id="alexLetters"></div>
+        <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true"><img src="src/L.svg" class="alexLetters rotate-fade-in" style="animation-delay: 0.1s; -webkit-animation-delay: 0.1s;" id="alexLetters"></div>
       </div>
       <div style="display: flex; justify-content: center; line-height: 4px;">
-        <img src="src/E.svg" class="alexLetters rotate-fade-in" style="animation-delay: 2s; -webkit-animation-delay: 0.2s;" id="alexLetters">  
-        <img src="src/X.svg" class="alexLetters rotate-fade-in" style="animation-delay: 2s; -webkit-animation-delay: 0.3s;"id="alexLetters">
+        <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true"><img src="src/E.svg" class="alexLetters rotate-fade-in" style="animation-delay: 0.2s; -webkit-animation-delay: 0.2s;" id="alexLetters"></div> 
+        <div data-tilt data-tilt-full-page-listening data-tilt-reverse="true"><img src="src/X.svg" class="alexLetters rotate-fade-in" style="animation-delay: 0.3s; -webkit-animation-delay: 0.3s;"id="alexLetters"></div>
       </div>
     </div>
   </div>
 
   <div class="nav navBarHidden" id="navBar">
     <div class="navLogo">
-      <img src="src/A.svg" class="navLetters" >
-      <img src="src/L.svg" class="navLetters" >
-      <img src="src/E.svg" class="navLetters" >
-      <img src="src/X.svg" class="navLetters" >
+      <div style="display: flex; flex-direction: column; justify-content: center; height: 90%"  class="logo" id="logo">
+        <div style="display: flex; justify-content: center;">
+          <img src="src/A.svg" class="navLetters rotate-in" style="animation-delay: 1.4; -webkit-animation-delay: 1.4s;">
+          <img src="src/L.svg" class="navLetters rotate-in" style="animation-delay: 1.6; -webkit-animation-delay: 1.6s;">
+        </div>
+        <div style="display: flex; justify-content: center; line-height: 4px;">
+          <img src="src/E.svg" class="navLetters rotate-in" style="animation-delay: 1.8s; -webkit-animation-delay: 1.8s;">
+          <img src="src/X.svg" class="navLetters rotate-in" style="animation-delay: 2s; -webkit-animation-delay: 2s;">
+        </div>
+      </div>
     </div>
   </div>
 
   <div id="myDIV" style="height: 100vh;">
 
-<button onclick="navAnimation()">Test</button>
+<button onclick="darkMode()">DarkMode</button>
 
       <h3>Alex Leybourne</h3>
 
