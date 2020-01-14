@@ -22,10 +22,11 @@ window.addEventListener('scroll', function() {
     document.getElementById("navBar").classList.remove("navBar")
     document.getElementById("navBar").classList.add("navBarHidden")
 
-    // Underline Control
+    // Hides Underline
     navIn = false
     document.getElementById('underline').style.width = '0px'
     document.getElementById('underline').style.hidden = true
+    document.getElementById(position).style.color = "rgba(0, 0, 0, 0.397)"
   
 
     // Removes Animations from Nav links
@@ -59,13 +60,17 @@ window.addEventListener('scroll', function() {
 
     // Underline Control
     navIn = true
-    whereAmI()
-
+  
     // Removes Animations from Nav links
     let navlinks = document.querySelectorAll('.navLink')
     for (var i = 0; i < navlinks.length; i++) {
         navlinks[i].classList.add("slide-in-top")
     }
+
+    // Moves and Animates underline
+    setTimeout(function() {
+      whereAmI()
+    }, 5000)
 
     // Nav Logo Animation
     let navletters = document.querySelectorAll('.rotate-out')
@@ -117,14 +122,12 @@ function whereAmI() {
       position = "aboutNav"
     }
 
+    document.getElementById(position).style.color = "black"
+
     aboutPos = getPos(position)
-
-    setTimeout(function() {
-      document.getElementById('underline').style.hidden = false
-      document.getElementById('underline').style.width = (aboutPos.width + 20) +  "px"
-    }, 4000)
-
     document.getElementById('underline').style.left = (aboutPos.left - 10) + "px"
+    document.getElementById('underline').style.hidden = false
+    document.getElementById('underline').style.width = (aboutPos.width + 20) +  "px"
   }
 }
 
