@@ -70,7 +70,7 @@ window.addEventListener('scroll', function() {
     // Moves and Animates underline
     setTimeout(function() {
       whereAmI()
-    }, 5000)
+    }, 4000)
 
     // Nav Logo Animation
     let navletters = document.querySelectorAll('.rotate-out')
@@ -110,20 +110,45 @@ function getPos(object) {
 // Updates the squiggly underline too
 
 let position = "aboutNav"
+let lastPosition = "aboutNav"
 
 function whereAmI() {
 
   if (navIn == true) {
     let landingHeight = document.getElementById('landingArea').offsetHeight
-    let aboutHeight = document.getElementById('aboutDiv').offsetHeight + landingHeight
+    let aboutHeight = document.getElementById('aboutDiv').offsetHeight + landingHeight 
+    let skillsHeight = document.getElementById('skillsDiv').offsetHeight + aboutHeight 
+    let projectsHeight = document.getElementById('projectsDiv').offsetHeight + skillsHeight 
+    let resumeHeight = document.getElementById('resumeDiv').offsetHeight + projectsHeight 
+    let contactHeight = document.getElementById('contactDiv').offsetHeight + resumeHeight 
 
-    if (scrollPosition > landingHeight && scrollPosition < aboutHeight) {
+    // Worlds longest if statement
+    if (scrollPosition < aboutHeight) {
       console.log("you're in the about section")
       position = "aboutNav"
+    } else if (scrollPosition < skillsHeight) {
+      console.log("you're in the skills section")
+      lastPosition = position
+      position = "skillsNav"
+    } else if (scrollPosition < projectsHeight) {
+      console.log("you're in the projects section")
+      lastPosition = position
+      position = "projectsNav"
+    } else if (scrollPosition < resumeHeight) {
+      console.log("you're in the resume section")
+      lastPosition = position
+      position = "resumeNav"
+    } else if (scrollPosition < contactHeight) {
+      console.log("you're in the contact section")
+      lastPosition = position
+      position = "contactNav"
     }
 
+    // Changes Nav section Colour
+    document.getElementById(lastPosition).style.color = "rgba(0, 0, 0, 0.397)"
     document.getElementById(position).style.color = "black"
 
+    // Moves Squiggle position
     aboutPos = getPos(position)
     document.getElementById('underline').style.left = (aboutPos.left - 10) + "px"
     document.getElementById('underline').style.hidden = false
