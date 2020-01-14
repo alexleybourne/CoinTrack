@@ -23,6 +23,13 @@ window.addEventListener('scroll', function() {
     document.getElementById("navBar").classList.remove("navBar")
     document.getElementById("navBar").classList.add("navBarHidden")
 
+    // Removes Animations from Nav links
+    let navlinks = document.querySelectorAll('.navLink')
+    for (var i = 0; i < navlinks.length; i++) {
+        navlinks[i].classList.remove("slide-in-top")
+    }
+
+    // Nav Logo Animation
     let navletters = document.querySelectorAll('.rotate-in')
     for (var i = 0; i < navletters.length; i++) {
         navletters[i].classList.remove("rotate-in")
@@ -45,6 +52,13 @@ window.addEventListener('scroll', function() {
     document.getElementById("navBar").classList.remove("navBarHidden")
     document.getElementById("navBar").classList.add("navBar")
 
+    // Removes Animations from Nav links
+    let navlinks = document.querySelectorAll('.navLink')
+    for (var i = 0; i < navlinks.length; i++) {
+        navlinks[i].classList.add("slide-in-top")
+    }
+
+    // Nav Logo Animation
     let navletters = document.querySelectorAll('.rotate-out')
     for (var i = 0; i < navletters.length; i++) {
         navletters[i].classList.add("rotate-in")
