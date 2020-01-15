@@ -2,6 +2,10 @@
   font-family: 'Rubik', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: white;
 }
@@ -41,6 +45,8 @@ body {
   height: 60px;
   width: 100vw;
   /* Slide in Animation */
+  -webkit-animation: slide-in-top 2s both;
+	animation: slide-in-top 2s both;
 }
 
 
@@ -56,6 +62,7 @@ body {
 
 .navLogo {
   margin: 0 20px;
+  cursor: pointer;
 }
 
 .navLetters {
@@ -347,6 +354,28 @@ body {
     -webkit-transform: translateY(-1000px);
             transform: translateY(-1000px);
     opacity: 0;
+  }
+}
+
+.fade-in {
+  -webkit-animation: fade-in 1s both;
+	animation: fade-in 1s both;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

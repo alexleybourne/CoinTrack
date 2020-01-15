@@ -78,7 +78,7 @@
   <!-- NAV BAR -->
   <div class="nav navBarHidden" id="navBar">
     <!-- Logo on Nav -->
-    <div class="navLogo">
+    <div class="navLogo" onclick="goTo('landingArea')">
       <div style="display: flex; flex-direction: column; justify-content: center; height: 90%"  class="logo" id="logo">
         <div style="display: flex; justify-content: center;">
           <img src="src/A.svg" class="navLetters rotate-in" style="animation-delay: 1.4; -webkit-animation-delay: 1.4s;">
@@ -95,11 +95,11 @@
     <div class="navLinksArea">
       <div class="navLinks">
 
-        <p class="navLink slide-in-top" id="aboutNav" style="animation-delay: 1s; -webkit-animation-delay: 1s;">About</p>
-        <p class="navLink slide-in-top" id="skillsNav" style="animation-delay: 1.2s; -webkit-animation-delay: 1.2s;">Skills</p>
-        <p class="navLink slide-in-top" id="projectsNav" style="animation-delay: 1.4s; -webkit-animation-delay: 1.4s;">Projects</p>
-        <p class="navLink slide-in-top" id="resumeNav" style="animation-delay: 1.6s; -webkit-animation-delay: 1.6s;">Resume</p>
-        <p class="navLink slide-in-top" id="contactNav" style="animation-delay: 1.8s; -webkit-animation-delay: 1.8s;">Contact</p>
+        <p class="navLink slide-in-top" id="aboutNav"    onclick="goTo('aboutDiv')"  style="animation-delay: 1.0s; -webkit-animation-delay: 0.2s;">About</p>
+        <p class="navLink slide-in-top" id="skillsNav"   onclick="goTo('skillsDiv')"  style="animation-delay: 1.2s; -webkit-animation-delay: 0.4s;">Skills</p>
+        <p class="navLink slide-in-top" id="projectsNav" onclick="goTo('projectsDiv')"  style="animation-delay: 1.4s; -webkit-animation-delay: 0.6s;">Projects</p>
+        <p class="navLink slide-in-top" id="resumeNav"   onclick="goTo('resumeDiv')"  style="animation-delay: 1.6s; -webkit-animation-delay: 0.8s;">Resume</p>
+        <p class="navLink slide-in-top" id="contactNav"  onclick="goTo('contactDiv')"  style="animation-delay: 1.8s; -webkit-animation-delay: 1.0s;">Contact</p>
         
         <div class="underline" id="underline"></div>
 

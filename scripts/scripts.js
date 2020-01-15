@@ -4,9 +4,6 @@ function pageLoaded() {
   console.log('Loaded')
 }
 
-// Delay for underline to come in
-let squiggleDelayTime = 6000
-
 // Nav Value
 let navIn = false
 
@@ -18,9 +15,11 @@ window.addEventListener('scroll', function() {
   let landingHeight = document.getElementById('landingArea').offsetHeight
   areaHeight = landingHeight / 3
  
-  
-  whereAmI()
-
+  if (navIn == true) {
+    setTimeout(function() {
+      whereAmI()
+    }, 2000)
+  }
 
   // At Top of Page
   if (scrollPosition < areaHeight) {
@@ -34,9 +33,8 @@ window.addEventListener('scroll', function() {
     document.getElementById('underline').style.width = '0px'
     document.getElementById('underline').style.hidden = true
     document.getElementById(position).classList.remove("black")
-  
 
-    // Removes Animations from Nav links
+    // removes Animations to Nav links
     let navlinks = document.querySelectorAll('.navLink')
     for (var i = 0; i < navlinks.length; i++) {
         navlinks[i].classList.remove("slide-in-top")
@@ -67,9 +65,13 @@ window.addEventListener('scroll', function() {
 
     // Underline Control
     navIn = true
-    whereAmI()
+
+    // Width Change Delay
+    setTimeout(function() {
+      
+    }, 8000)
   
-    // Removes Animations from Nav links
+    // Adds Animations to Nav links
     let navlinks = document.querySelectorAll('.navLink')
     for (var i = 0; i < navlinks.length; i++) {
         navlinks[i].classList.add("slide-in-top")
@@ -157,13 +159,15 @@ function whereAmI() {
     aboutPos = getPos(position)
     document.getElementById('underline').style.left = (aboutPos.left - 10) + "px"
     document.getElementById('underline').style.hidden = false
+    document.getElementById('underline').style.transition = '1s'
+    document.getElementById('underline').style.width = (aboutPos.width + 20) +  "px"
 
-    // Width Change Delay
-    setTimeout(function() {
-      document.getElementById('underline').style.width = (aboutPos.width + 20) +  "px"
-    }, 3000)
-    
   }
+}
+
+function goTo(divName) {
+  var element = document.getElementById(divName)
+  element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
 }
 
 
