@@ -91,6 +91,10 @@ body {
   color: black;
 }
 
+.black {
+  color: black;
+}
+
 /* Lil Squiggle underline w/ Animation */
 .underline {
   position: absolute;
