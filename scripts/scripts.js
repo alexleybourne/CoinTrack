@@ -32,7 +32,7 @@ window.addEventListener('scroll', function() {
     navIn = false
     document.getElementById('underline').style.width = '0px'
     document.getElementById('underline').style.hidden = true
-    document.getElementById(position).classList.remove("black")
+    document.getElementById(position).classList.remove("selected")
 
     // removes Animations to Nav links
     let navlinks = document.querySelectorAll('.navLink')
@@ -152,8 +152,8 @@ function whereAmI() {
     }
 
     // Changes Nav section Colour
-    document.getElementById(lastPosition).classList.remove("black")
-    document.getElementById(position).classList.add("black")
+    document.getElementById(lastPosition).classList.remove("selected")
+    document.getElementById(position).classList.add("selected")
 
     // Moves Squiggle position
     aboutPos = getPos(position)
@@ -168,6 +168,7 @@ function whereAmI() {
 function goTo(divName) {
   var element = document.getElementById(divName)
   element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
+  whereAmI()
 }
 
 

@@ -1,3 +1,10 @@
+:root {
+  --background-color: white;
+  --nav-color: rgba(255, 255, 255, 0.89);
+  --nav-link-color: rgba(0, 0, 0, 0.397);
+  --nav-selected-color: black;
+}
+
 * {
   font-family: 'Rubik', sans-serif;
 }
@@ -7,7 +14,7 @@ html {
 }
 
 body {
-  background-color: white;
+  background-color: var(--background-color);
 }
 
 .invert {
@@ -36,7 +43,7 @@ body {
   align-items: center;
   position: fixed;
   z-index: 10;
-  background-color: rgba(255, 255, 255, 0.89);
+  background-color: var(--nav-color)
 }
 
 .navBar {
@@ -63,6 +70,12 @@ body {
 .navLogo {
   margin: 0 20px;
   cursor: pointer;
+  animation: 1s;
+  transform: scale(1.0);
+}
+
+.navLogo:hover {
+  transform: scale(1.1);
 }
 
 .navLetters {
@@ -89,17 +102,17 @@ body {
   font-weight: bold;
   transition: 0.5s;
   right: 0;
-  color: rgba(0, 0, 0, 0.397);
+  color: var(--nav-link-color)
 }
 
 .navLink:hover {
   cursor: pointer;
   font-weight: bold;
-  color: black;
+  color: var(--nav-selected-color);
 }
 
-.black {
-  color: black;
+.selected {
+  color: var(--nav-selected-color);
 }
 
 /* Lil Squiggle underline w/ Animation */
@@ -123,33 +136,6 @@ body {
 	100% {
 		background-position: 200px 0;
 	}
-}
-
-.example-1 {
-  width: 130px;
-  height: 130px;
-}
-
-.example-3 {
-  width: 100px;
-  height: 100px;
-}
-
-.example-3 .sticker-img {
-
-  background-image: url(https://cnet3.cbsistatic.com/img/Yt768C55hXNi2eGSB9qOv-e7SQg=/2011/03/16/c7675aa8-fdba-11e2-8c7c-d4ae52e62bcc/Chrome-logo-2011-03-16.jpg);
-  
-  background-position: center;
-  background-size: 140px;
-  transform: rotate(-45deg);
-  
-}
-  
-  
-.example-2 .sticker-shadow {
-  
-  opacity: 0.6;
-  
 }
 
 /* Animations */
