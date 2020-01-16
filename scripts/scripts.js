@@ -2,6 +2,7 @@
 
 function pageLoaded() {
   console.log('Loaded')
+  goTo('landingArea')
 }
 
 // Nav Value
@@ -10,15 +11,22 @@ let navIn = false
 // Scroll Value
 let scrollPosition = 0
 
+let count = 1
+
 window.addEventListener('scroll', function() {
   scrollPosition = window.pageYOffset
   let landingHeight = document.getElementById('landingArea').offsetHeight
   areaHeight = landingHeight / 3
- 
+
   if (navIn == true) {
-    setTimeout(function() {
+    if (count == 1) {
+      setTimeout(function() {
       whereAmI()
-    }, 2000)
+      count++
+      }, 4000)
+    } else {
+      whereAmI()
+    }
   }
 
   // At Top of Page
@@ -66,11 +74,6 @@ window.addEventListener('scroll', function() {
     // Underline Control
     navIn = true
 
-    // Width Change Delay
-    setTimeout(function() {
-      
-    }, 8000)
-  
     // Adds Animations to Nav links
     let navlinks = document.querySelectorAll('.navLink')
     for (var i = 0; i < navlinks.length; i++) {
@@ -119,50 +122,48 @@ let lastPosition = "aboutNav"
 
 function whereAmI() {
 
-  if (navIn == true) {
-    let landingHeight = document.getElementById('landingArea').offsetHeight
-    let aboutHeight = document.getElementById('aboutDiv').offsetHeight + landingHeight 
-    let skillsHeight = document.getElementById('skillsDiv').offsetHeight + aboutHeight 
-    let projectsHeight = document.getElementById('projectsDiv').offsetHeight + skillsHeight 
-    let resumeHeight = document.getElementById('resumeDiv').offsetHeight + projectsHeight 
-    let contactHeight = document.getElementById('contactDiv').offsetHeight + resumeHeight 
+  let landingHeight = document.getElementById('landingArea').offsetHeight
+  let aboutHeight = document.getElementById('aboutDiv').offsetHeight + landingHeight 
+  let skillsHeight = document.getElementById('skillsDiv').offsetHeight + aboutHeight 
+  let projectsHeight = document.getElementById('projectsDiv').offsetHeight + skillsHeight 
+  let resumeHeight = document.getElementById('resumeDiv').offsetHeight + projectsHeight 
+  let contactHeight = document.getElementById('contactDiv').offsetHeight + resumeHeight 
 
-    let offSet = -300
+  let offSet = -300
 
-    // Worlds longest if statement
-    if (scrollPosition < aboutHeight + offSet) {
-      console.log("you're in the about section")
-      position = "aboutNav"
-    } else if (scrollPosition < skillsHeight + offSet) {
-      console.log("you're in the skills section")
-      lastPosition = position
-      position = "skillsNav"
-    } else if (scrollPosition < projectsHeight + offSet) {
-      console.log("you're in the projects section")
-      lastPosition = position
-      position = "projectsNav"
-    } else if (scrollPosition < resumeHeight + offSet) {
-      console.log("you're in the resume section")
-      lastPosition = position
-      position = "resumeNav"
-    } else if (scrollPosition < contactHeight + offSet) {
-      console.log("you're in the contact section")
-      lastPosition = position
-      position = "contactNav"
-    }
-
-    // Changes Nav section Colour
-    document.getElementById(lastPosition).classList.remove("selected")
-    document.getElementById(position).classList.add("selected")
-
-    // Moves Squiggle position
-    aboutPos = getPos(position)
-    document.getElementById('underline').style.left = (aboutPos.left - 10) + "px"
-    document.getElementById('underline').style.hidden = false
-    document.getElementById('underline').style.transition = '1s'
-    document.getElementById('underline').style.width = (aboutPos.width + 20) +  "px"
-
+  // Worlds longest if statement
+  if (scrollPosition < aboutHeight + offSet) {
+    console.log("you're in the about section")
+    position = "aboutNav"
+  } else if (scrollPosition < skillsHeight + offSet) {
+    console.log("you're in the skills section")
+    lastPosition = position
+    position = "skillsNav"
+  } else if (scrollPosition < projectsHeight + offSet) {
+    console.log("you're in the projects section")
+    lastPosition = position
+    position = "projectsNav"
+  } else if (scrollPosition < resumeHeight + offSet) {
+    console.log("you're in the resume section")
+    lastPosition = position
+    position = "resumeNav"
+  } else if (scrollPosition < contactHeight + offSet) {
+    console.log("you're in the contact section")
+    lastPosition = position
+    position = "contactNav"
   }
+
+  // Changes Nav section Colour
+  document.getElementById(lastPosition).classList.remove("selected")
+  document.getElementById(position).classList.add("selected")
+
+  // Moves Squiggle position
+  aboutPos = getPos(position)
+  document.getElementById('underline').style.left = (aboutPos.left - 10) + "px"
+  document.getElementById('underline').style.hidden = false
+  document.getElementById('underline').style.transition = '1s'
+  document.getElementById('underline').style.width = (aboutPos.width + 20) +  "px"
+
 }
 
 function goTo(divName) {
