@@ -1,7 +1,7 @@
 // Page load and setup
-
 function pageLoaded() {
   console.log('Loaded')
+  // Scrolls page to top
   goTo('landingArea')
 }
 
@@ -11,7 +11,21 @@ let navIn = false
 // Scroll Value
 let scrollPosition = 0
 
+// Animation Count
 let count = 1
+
+// See if user is on mobile
+let mobileView = false
+
+// Checks width of window
+let windowWidth = window.innerWidth
+if (windowWidth < 700) {
+  console.log("the display is mobile width:" + windowWidth + "px")
+  mobileView = true
+} else {
+  console.log(windowWidth + "px")
+  mobileView = false
+}
 
 window.addEventListener('scroll', function() {
   scrollPosition = window.pageYOffset
@@ -133,22 +147,17 @@ function whereAmI() {
 
   // Worlds longest if statement
   if (scrollPosition < aboutHeight + offSet) {
-    console.log("you're in the about section")
     position = "aboutNav"
   } else if (scrollPosition < skillsHeight + offSet) {
-    console.log("you're in the skills section")
     lastPosition = position
     position = "skillsNav"
   } else if (scrollPosition < projectsHeight + offSet) {
-    console.log("you're in the projects section")
     lastPosition = position
     position = "projectsNav"
   } else if (scrollPosition < resumeHeight + offSet) {
-    console.log("you're in the resume section")
     lastPosition = position
     position = "resumeNav"
   } else if (scrollPosition < contactHeight + offSet) {
-    console.log("you're in the contact section")
     lastPosition = position
     position = "contactNav"
   }
