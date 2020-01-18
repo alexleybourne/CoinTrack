@@ -1,6 +1,11 @@
 // Page load and setup
 function pageLoaded() {
   console.log('Loaded')
+
+  // Checks window and position on load
+  checkWindowWidth()
+  whereAmI()
+
   // Scrolls page to top
   goTo('landingArea')
 }
@@ -18,15 +23,29 @@ let count = 1
 let mobileView = false
 
 // Checks width of window
-let windowWidth = window.innerWidth
-if (windowWidth < 700) {
-  console.log("the display is mobile width:" + windowWidth + "px")
-  mobileView = true
-} else {
-  console.log(windowWidth + "px")
-  mobileView = false
+//  And hides or shows nav
+function checkWindowWidth() {
+  let windowWidth = window.innerWidth
+  if (windowWidth < 700) {
+    console.log("the display is mobile width:" + windowWidth + "px")
+    mobileView = true
+    document.getElementById("navLinks").style.opacity = 0
+    document.getElementById("navLinks").style.pointerEvents = "none"
+  } else {
+    console.log(windowWidth + "px")
+    mobileView = false
+    document.getElementById("navLinks").style.opacity = 1
+    document.getElementById("navLinks").style.pointerEvents = "auto"
+  }
 }
 
+// Checks window on resize
+window.addEventListener('resize',function() {
+  checkWindowWidth()
+  whereAmI()
+})
+
+// Runs code on any scroll (updates position on nav mainly)
 window.addEventListener('scroll', function() {
   scrollPosition = window.pageYOffset
   let landingHeight = document.getElementById('landingArea').offsetHeight
