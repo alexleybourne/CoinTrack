@@ -6,8 +6,13 @@ function pageLoaded() {
   checkWindowWidth()
   whereAmI()
 
-  // Scrolls page to top
-  goTo('landingArea')
+  // Scrolls page to top -- commented out for development
+  // goTo('landingArea')
+
+  // Hides nav glitch on load
+  setTimeout(function() {
+    document.getElementById("navBar").style.top = 0
+  }, 1000)
 }
 
 // Nav Value
@@ -29,11 +34,13 @@ function checkWindowWidth() {
   if (windowWidth < 700) {
     console.log("the display is mobile width:" + windowWidth + "px")
     mobileView = true
+    document.getElementById("hamburger").style.opacity = 1
     document.getElementById("navLinks").style.opacity = 0
     document.getElementById("navLinks").style.pointerEvents = "none"
   } else {
     console.log(windowWidth + "px")
     mobileView = false
+    document.getElementById("hamburger").style.opacity = 0
     document.getElementById("navLinks").style.opacity = 1
     document.getElementById("navLinks").style.pointerEvents = "auto"
   }

@@ -20,6 +20,7 @@ html {
 
 body {
   background-color: var(--background-color);
+  margin: 0;
 }
 
 .invert {
@@ -143,6 +144,31 @@ body {
 		background-position: 200px 0;
 	}
 }
+
+
+.hamburger {
+  position: relative;
+  right: 20px;
+  width: 40px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.hamburger:hover {
+ transform: rotate(180deg);
+}
+
+.hamburgerLine {
+  width: 30px;
+  height: 3px;
+  background-color: var(--nav-selected-color);
+  border-radius: 100px;
+  margin: 8px 0;
+  transition: 1s;
+}
+
+
+
 
 /* Animations */
 
