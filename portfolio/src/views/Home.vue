@@ -1,6 +1,7 @@
 <template>
+<div class="bg" :class="{blackBG: DarkMode, whiteBG: !DarkMode}">
   <div class="home">
-    <div @click="ColorSwitch" class="darkModeButton">
+    <div @click="ColorSwitch" class="darkModeButton" :class="{ whiteCardNS: !DarkMode, blackCardNS: DarkMode }">
       <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
     </div>
     <div class="center">
@@ -27,7 +28,7 @@
         <p :class="{ whiteText: DarkMode }"> Come say hello. </p>
       </a>
     </div>
-    <div class="bg" :class="{blackBG: DarkMode, whiteBG: !DarkMode}"></div>
+  </div>
   </div>
 </template>
 
@@ -79,8 +80,14 @@ a {
 
 .darkModeButton {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 40px;
   right: 40px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .darkModeButton img {
@@ -148,8 +155,8 @@ a {
 .bg {
   position: absolute;
   z-index: -1;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   left: 0;
   top: 0;
 }
@@ -184,6 +191,16 @@ a {
               -20px -20px 28px #181d21;
 }
 
+.whiteCardNS {
+  background: #ffffff;
+  box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
+}
+
+.blackCardNS {
+  background: linear-gradient(145deg, #14171b, #181c20);
+}
+
 .socialSection:hover {
   transform: scale(1.05);
 }
@@ -201,6 +218,35 @@ a {
 .socialIcon {
   width: 70px;
   height: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  .socialLinks {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+  }
+
+  .socialSection {
+  margin: 30px;
+  }
+
+  .bg {
+    height: auto;
+  }
+
+  .mainCard {
+    width: 90vw;
+    height: 70vh;
+    border-radius: 50px;
+  }
+
+  .darkModeButton {
+    position: fixed;
+    top: unset;
+    bottom: 20px;
+    right: 20px;
+  }
 }
 
 </style>
