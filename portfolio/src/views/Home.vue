@@ -4,6 +4,7 @@
       <h1 @click="colorSwitch" :class="{ whiteText: !bcWhite }">Hello My Name is Alex</h1>
     </div>
     <p @click="colorSwitch" :class="{ whiteText: !bcWhite }"> Currently on <DaysOfCode/>+ Days of Code </p>
+    <p @click="colorSwitch" :class="{ whiteText: !bcWhite }"> I have <Commits/> Commits on Github this year and Counting </p>
     <div class="bg" :class="{blackBG: !bcWhite}"></div>
   </div>
 </template>
