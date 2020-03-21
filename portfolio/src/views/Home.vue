@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div @click="colorSwitch" class="darkModeButton">
+    <div @click="ColorSwitch" class="darkModeButton">
       <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
     </div>
     <div class="center">
@@ -46,9 +46,21 @@ export default {
     }
   },
   methods: {
-    colorSwitch() {
+    ColorSwitch() {
       this.DarkMode ? this.DarkMode = false : this.DarkMode = true
+    },
+    TimeOfDay(){
+      var d = new Date()
+      var n = d.getHours()
+      if ( n > 5 && n < 18 ) {
+        this.DarkMode = false
+      } else {
+        this.DarkMode = true
+      }
     }
+  },
+  mounted() {
+    this.TimeOfDay()
   }
 }
 </script>

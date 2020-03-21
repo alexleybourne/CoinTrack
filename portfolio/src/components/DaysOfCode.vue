@@ -17,7 +17,7 @@ export default {
         }
     },
     mounted(){
-        setTimeout(() => {  gsap.to(this.$data, { duration: 0.5, tweenedNumber: this.number }) }, 100)
+        setTimeout(() => {  gsap.to(this.$data, { duration: 0.5, tweenedNumber: this.number }) }, 800)
     },
     methods: {
 
