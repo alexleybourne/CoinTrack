@@ -1,8 +1,7 @@
 <template>
   <div class="home">
-    <div @click="colorSwitch" class="darkModeButton tooltip">
+    <div @click="colorSwitch" class="darkModeButton">
       <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
-      <span class="tooltiptext">DarkMode</span>
     </div>
     <div class="center">
       <div class="mainCard" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
@@ -190,28 +189,6 @@ a {
 .socialIcon {
   width: 70px;
   height: auto;
-}
-
-.tooltip .tooltiptext {
-  opacity: 0;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-  transition-duration: 0.2s;
-}
-
-.tooltip:hover .tooltiptext {
-  opacity: 100%;
 }
 
 </style>
