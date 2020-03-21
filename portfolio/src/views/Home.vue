@@ -123,8 +123,6 @@ a {
 }
 
 .center h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: Bold;
   font-size: 80px;
   cursor: default;
 }
