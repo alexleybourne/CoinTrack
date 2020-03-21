@@ -1,27 +1,27 @@
 <template>
-  <div class="home" :class="{blackBG: DarkMode}">
+  <div class="home">
     <div class="center">
       <h1 @click="colorSwitch" :class="{ whiteText: DarkMode }">Hi I'm Alex</h1>
     </div>
     <br>
     <div class="socialLinks">
-      <a href="https://twitter.com/AlexLeybourne" target="_blank" class="socialSection">
+      <a href="https://twitter.com/AlexLeybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/twitter.svg" alt="Twitter Logo">
         <h1 :class="{ whiteText: DarkMode }"> <DaysOfCode/>+ </h1>
         <p :class="{ whiteText: DarkMode }"> #100DaysOfCode</p>
       </a>
-      <a href="https://github.com/alexleybourne" target="_blank" class="socialSection">
+      <a href="https://github.com/alexleybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/github-logo.svg" alt="Github Logo">
         <h1 :class="{ whiteText: DarkMode }"> <Commits/> Commits</h1>
         <p :class="{ whiteText: DarkMode }"> this year and counting.</p>
       </a>
-      <a href="https://www.linkedin.com/in/alexleybourne/" target="_blank" class="socialSection">
+      <a href="https://www.linkedin.com/in/alexleybourne/" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/linkedin.svg" alt="Linkedin Logo">
         <h1 :class="{ whiteText: DarkMode }"> Lets Connect </h1>
         <p :class="{ whiteText: DarkMode }"> Come say hello. </p>
       </a>
     </div>
-    <div class="bg" :class="{blackBG: DarkMode}"></div>
+    <div class="bg" :class="{blackBG: DarkMode, whiteBG: !DarkMode}"></div>
   </div>
 </template>
 
@@ -80,7 +80,13 @@ a {
 }
 
 .blackBG {
-  background-color: black;
+  background-color: #161A1E;
+  transition-duration: 0.2s;
+}
+
+.whiteBG {
+  background-color: #ffff;
+  transition-duration: 0.2s;
 }
 
 .invert {
@@ -107,6 +113,26 @@ a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  height: 200px;
+  width: 200px;
+  border-radius: 50px;
+  transition-duration: 0.2s;
+}
+
+.whiteCard {
+  background: #ffffff;
+  box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
+}
+
+.blackCard {
+  background: #161A1E;
+  box-shadow:  20px 20px 28px #14171b, 
+              -20px -20px 28px #181d21;
+}
+
+.socialSection:hover {
+  transform: scale(1.05);
 }
 
 .socialSection h1 {
@@ -120,7 +146,7 @@ a {
 }
 
 .socialIcon {
-  width: 60px;
+  width: 70px;
   height: auto;
 }
 
