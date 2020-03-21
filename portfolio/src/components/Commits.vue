@@ -11,8 +11,7 @@ export default {
     name: 'Commits',
     data() {
         return {
-            output: '',
-            resultData: '',
+            output: 'none',
         }
     },
     mounted(){
@@ -20,11 +19,14 @@ export default {
     },
     methods: {
 
-        async getGithubCommits(){
-            var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-             function doCORSRequest(options, printResult) {
-                var x = new XMLHttpRequest();
-                x.open(options.method, cors_api_url + options.url);
+        getGithubCommits(){
+
+           
+            var cors_api_url = 'https://cors-anywhere.herokuapp.com/'
+            let res = ''
+            function doCORSRequest(options, printResult) {
+                var x = new XMLHttpRequest()
+                x.open(options.method, cors_api_url + options.url)
                 x.onload = x.onerror = function() {
                 printResult(
                     options.method + ' ' + options.url + '\n' +
@@ -33,19 +35,27 @@ export default {
                 );
                 };
                 if (/^POST/i.test(options.method)) {
-                x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
                 }
-                x.send(options.data);
-            }
+                x.send(options.data)
+            
 
-            doCORSRequest({
-                method: 'GET',
-                url: 'https://github.com/alexleybourne',
-            }, function printResult(result) {
-                console.log(result)
-            })
-           
-        }
+                doCORSRequest({
+                    method: 'GET',
+                    url: 'https://github.com/alexleybourne',
+                }, function printResult(result) {
+                    
+                    console.log(result)
+                    res = result
+                
+                })
+            
+                this.output = res
+                console.log(this.output)
+
+            }
+            
+        },
     },
 }
 </script>

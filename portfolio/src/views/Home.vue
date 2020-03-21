@@ -3,17 +3,19 @@
     <div class="center">
       <h1 @click="colorSwitch" :class="{ whiteText: !bcWhite }">Hello My Name is Alex</h1>
     </div>
-    <Commits/>
+    <DaysOfCode/>
     <div class="bg" :class="{blackBG: !bcWhite}"></div>
   </div>
 </template>
 
 <script>
 const Commits = () => import("@/components/Commits.vue");
+const DaysOfCode = () => import("@/components/DaysOfCode.vue");
 export default {
   name: 'Home',
   components: {
     Commits,
+    DaysOfCode,
   },
   data() {
     return {
