@@ -7,8 +7,8 @@ export default {
     name: 'Commits',
     data() {
         return {
-            output: 0,
-            tweenedNumber: 0,
+            output: 100,
+            tweenedNumber: 100,
             functionCalled: false,
         }
     },
@@ -50,7 +50,7 @@ export default {
                 slice = res.slice(start, end)
                 slice = slice.replace(/\D/g,'')
                 slice = Number(slice)
-                // console.log(slice)
+                console.log(slice)
                 updateData()
             })
 

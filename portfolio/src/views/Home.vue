@@ -19,7 +19,7 @@
       </a>
       <a href="https://github.com/alexleybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/github-logo.svg" alt="Github Logo">
-        <h1 :class="{ whiteText: DarkMode }"> <Commits/> Commits</h1>
+        <h1 :class="{ whiteText: DarkMode }"> <Commits/>+ Commits</h1>
         <p :class="{ whiteText: DarkMode }"> this year and counting.</p>
       </a>
       <a href="https://www.linkedin.com/in/alexleybourne/" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
@@ -88,6 +88,11 @@ a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  transition-duration: 0.5s;
+}
+
+.darkModeButton:hover {
+  transform: scale(1.1);
 }
 
 .darkModeButton img {
@@ -236,6 +241,7 @@ a {
   .mainCard {
     width: 90vw;
     height: 70vh;
+    min-height: 600px;
     border-radius: 50px;
   }
 

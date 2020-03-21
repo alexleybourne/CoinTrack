@@ -8,7 +8,7 @@ export default {
     data() {
         return {
             number: 200,
-            tweenedNumber: 0
+            tweenedNumber: 100
         }
     },
     computed: {
