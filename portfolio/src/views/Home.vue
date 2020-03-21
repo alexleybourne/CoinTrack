@@ -14,18 +14,24 @@
     <div class="socialLinks">
       <a href="https://twitter.com/AlexLeybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/twitter.svg" alt="Twitter Logo">
-        <h1 :class="{ whiteText: DarkMode }"> <DaysOfCode/>+ </h1>
-        <p :class="{ whiteText: DarkMode }"> #100DaysOfCode</p>
+        <div class="socialText">
+          <h1 :class="{ whiteText: DarkMode }"> <DaysOfCode/>+ </h1>
+          <p :class="{ whiteText: DarkMode }"> #100DaysOfCode</p>
+        </div>
       </a>
       <a href="https://github.com/alexleybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
-        <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/github-logo.svg" alt="Github Logo">
-        <h1 :class="{ whiteText: DarkMode }"> <Commits/>+ Commits</h1>
-        <p :class="{ whiteText: DarkMode }"> this year and counting.</p>
+          <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/github-logo.svg" alt="Github Logo">
+        <div class="socialText">
+          <h1 :class="{ whiteText: DarkMode }"> <Commits/>+ Commits</h1>
+          <p :class="{ whiteText: DarkMode }"> in a year and counting.</p>
+        </div>
       </a>
       <a href="https://www.linkedin.com/in/alexleybourne/" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/linkedin.svg" alt="Linkedin Logo">
-        <h1 :class="{ whiteText: DarkMode }"> Lets Connect </h1>
-        <p :class="{ whiteText: DarkMode }"> Come say hello. </p>
+        <div class="socialText">
+          <h1 :class="{ whiteText: DarkMode }"> Lets Connect </h1>
+          <p :class="{ whiteText: DarkMode }"> Come say hello. </p>
+        </div>
       </a>
     </div>
   </div>
@@ -104,6 +110,7 @@ a {
 
 .mainCard {
   width: 50vw;
+  min-width: 500px;
   height: 50vh;
   border-radius: 50px;
 }
@@ -130,6 +137,7 @@ a {
 .center h1 {
   font-size: 80px;
   cursor: default;
+  margin: 20px;
 }
 
 .whiteText {
@@ -214,13 +222,14 @@ a {
 }
 
 .socialSection p {
-  margin: 0;
+  flex-direction: row;
   font-size: 12px;
 }
 
 .socialIcon {
   width: 70px;
   height: auto;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -231,7 +240,18 @@ a {
   }
 
   .socialSection {
-  margin: 30px;
+    margin: 30px;
+    width: 90vw;
+    flex-direction: row;
+  }
+
+  .socialIcon {
+    margin: 20px;
+    margin-right: 80px;
+  }
+
+  .socialText {
+    transform: translateY(10px) ;
   }
 
   .bg {
@@ -240,7 +260,8 @@ a {
 
   .mainCard {
     width: 90vw;
-    height: 70vh;
+    min-width: 300px;
+    height: 60vh;
     min-height: 600px;
     border-radius: 50px;
   }
