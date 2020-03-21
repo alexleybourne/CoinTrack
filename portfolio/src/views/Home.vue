@@ -3,7 +3,7 @@
     <div class="center">
       <h1 @click="colorSwitch" :class="{ whiteText: !bcWhite }">Hello My Name is Alex</h1>
     </div>
-    <DaysOfCode/>
+    <p @click="colorSwitch" :class="{ whiteText: !bcWhite }"> Currently on <DaysOfCode/>+ Days of Code </p>
     <div class="bg" :class="{blackBG: !bcWhite}"></div>
   </div>
 </template>
@@ -46,6 +46,14 @@ export default {
 .center h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: Bold;
+  font-size: 40px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: Bold;
+  font-size: 24px;
+  text-align: center;
 }
 
 .whiteText {

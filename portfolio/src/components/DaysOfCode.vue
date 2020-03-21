@@ -1,7 +1,5 @@
 <template>
-    <div id="animated-number-demo">
-        <p>{{ animatedNumber }}</p>
-    </div>
+        <span>{{ animatedNumber }}</span>
 </template>
 
 <script>
@@ -30,7 +28,7 @@ export default {
 
 <style scoped>
 
-    p {
+    span {
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
         font-size: 24px;
