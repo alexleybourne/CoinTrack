@@ -1,7 +1,14 @@
 <template>
   <div class="home">
+    <div @click="colorSwitch" class="darkModeButton tooltip">
+      <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
+      <span class="tooltiptext">DarkMode</span>
+    </div>
     <div class="center">
-      <h1 @click="colorSwitch" :class="{ whiteText: DarkMode }">Hi I'm Alex</h1>
+      <div class="mainCard" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
+        <img src="@/assets/images/ProfileImage.jpg" alt="Profile Picture" class="profileImage" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
+        <h1 :class="{ whiteText: DarkMode }">Hi I'm Alex</h1>
+      </div>
     </div>
     <br>
     <div class="socialLinks">
@@ -58,21 +65,50 @@ a {
   color: inherit; 
   text-decoration:none; 
 } 
+
+.darkModeButton {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.darkModeButton img {
+  height: auto;
+  width: 40px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.mainCard {
+  width: 50vw;
+  height: 50vh;
+  border-radius: 50px;
+}
   
 .home {
   background-size: fill;
 }
 
+.profileImage {
+  height: auto;
+  width: 200px;
+  border-radius: 100%;
+  margin-top: 50px;
+}
+
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 30vh;
+  align-items: center;
+  margin-top: 10vh;
 }
 
 .center h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: Bold;
-  font-size: 100px;
+  font-size: 80px;
+  cursor: default;
 }
 
 .whiteText {
@@ -93,6 +129,11 @@ a {
   filter: invert(1)
 }
 
+.invertButton {
+  transform: rotate(180deg);
+  filter: invert(1)
+}
+
 .bg {
   position: absolute;
   z-index: -1;
@@ -105,6 +146,7 @@ a {
 .socialLinks {
   display: flex;
   justify-content: space-around;
+  margin-top: 50px;
 }
 
 .socialSection {
@@ -148,6 +190,28 @@ a {
 .socialIcon {
   width: 70px;
   height: auto;
+}
+
+.tooltip .tooltiptext {
+  opacity: 0;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  transition-duration: 0.2s;
+}
+
+.tooltip:hover .tooltiptext {
+  opacity: 100%;
 }
 
 </style>
