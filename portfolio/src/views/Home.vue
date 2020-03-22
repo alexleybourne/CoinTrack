@@ -85,6 +85,7 @@ a {
 } 
 
 .darkModeButton {
+  z-index: 4;
   position: absolute;
   display: flex;
   align-items: center;
@@ -145,7 +146,7 @@ a {
 }
 
 .blackBG {
-  background-color: #161A1E;
+  background-color: rgb(33, 36, 40);
   transition-duration: 0.2s;
 }
 
@@ -209,6 +210,7 @@ a {
 }
 
 .blackCardNS {
+  background: #161A1E;
   background: linear-gradient(145deg, #14171b, #181c20);
 }
 
