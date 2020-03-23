@@ -1,0 +1,234 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+  
+  a { 
+    color: inherit; 
+    text-decoration:none; 
+  } 
+
+  .loading {
+    z-index: 20;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #14171b;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.2s;
+  }
+
+  .hidden {
+      opacity: 0;
+      pointer-events: none;
+  }
+
+  .visible {
+      opacity: 1;
+  }
+
+  .loading p {
+      color: white;
+      font-weight: bold;
+      font-size: 30px;
+  }
+  
+  .darkModeButton {
+    z-index: 4;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  
+  .darkModeButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .darkModeButton img {
+    height: auto;
+    width: 40px;
+    transition-duration: 0.5s;
+  }
+  
+  .mainCard {
+    width: 50vw;
+    min-width: 500px;
+    height: auto;
+    border-radius: 50px;
+  }
+    
+  .home {
+    background-size: fill;
+  }
+  
+  .profileImage {
+    height: auto;
+    width: 200px;
+    border-radius: 100%;
+    margin-top: 50px;
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+  }
+  
+  .center h1 {
+    font-size: 80px;
+    cursor: default;
+    margin: 20px;
+  }
+
+  .whiteText {
+    color: white;
+  }
+  
+  .blackBG {
+    background-color: rgb(33, 36, 40);
+    transition-duration: 0.2s;
+  }
+  
+  .whiteBG {
+    background-color: #ffff;
+    transition-duration: 0.2s;
+  }
+  
+  .invert {
+    filter: invert(1)
+  }
+  
+  .invertButton {
+    transform: rotate(180deg);
+    filter: invert(1)
+  }
+  
+  .bg {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    left: 0;
+    top: 0;
+  }
+  
+  .socialLinks {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+  
+  .socialSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+  }
+  
+  .whiteCard {
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9, 
+               -20px -20px 60px #ffffff;
+  }
+  
+  .blackCard {
+    background: #161A1E;
+    box-shadow:  20px 20px 28px #14171b, 
+                -20px -20px 28px #181d21;
+  }
+  
+  .whiteCardNS {
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9, 
+               -20px -20px 60px #ffffff;
+  }
+  
+  .blackCardNS {
+    background: #161A1E;
+    background: linear-gradient(145deg, #14171b, #181c20);
+  }
+  
+  .socialSection:hover {
+    transform: scale(1.05);
+  }
+  
+  .socialSection h1 {
+    margin: 4px 0 0 0;
+    font-size: 20px;
+  }
+  
+  .socialSection p {
+    flex-direction: row;
+    font-size: 12px;
+  }
+  
+  .socialIcon {
+    width: 70px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .socialLinks {
+      flex-direction: column;
+      align-items: center;
+      margin: 50px;
+    }
+  
+    .socialSection {
+      margin: 30px;
+      width: 90vw;
+      flex-direction: row;
+    }
+  
+    .socialIcon {
+      margin: 20px;
+      margin-right: 80px;
+    }
+  
+    .socialText {
+      transform: translateY(10px) ;
+    }
+  
+    .bg {
+      height: auto;
+    }
+  
+    .mainCard {
+      width: 90vw;
+      min-width: 300px;
+      height: 60vh;
+      min-height: 600px;
+      border-radius: 50px;
+    }
+  
+    .darkModeButton {
+      position: fixed;
+      top: unset;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .hidden {
+        opacity: 0 !important;
+    }
+  }

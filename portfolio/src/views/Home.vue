@@ -1,5 +1,9 @@
 <template>
 <div class="bg" :class="{blackBG: DarkMode, whiteBG: !DarkMode}">
+  <div class="loading" :class="{visible: !PageLoaded, hidden: PageLoaded}" >
+    <img src="@/assets/loading.gif" alt="tetris loading gif">
+    <p>LOADING</p>
+    </div>
   <div class="home">
     <div @click="ColorSwitch" class="darkModeButton" :class="{ whiteCardNS: !DarkMode, blackCardNS: DarkMode }">
       <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
@@ -9,47 +13,26 @@
         <img src="@/assets/images/ProfileImage.jpg" alt="Profile Picture" class="profileImage" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <h1 :class="{ whiteText: DarkMode }">Hi I'm Alex</h1>
       </div>
+      <br>
     </div>
     <br>
-    <div class="socialLinks">
-      <a href="https://twitter.com/AlexLeybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
-        <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/twitter.svg" alt="Twitter Logo">
-        <div class="socialText">
-          <h1 :class="{ whiteText: DarkMode }"> <DaysOfCode/>+ </h1>
-          <p :class="{ whiteText: DarkMode }"> #100DaysOfCode</p>
-        </div>
-      </a>
-      <a href="https://github.com/alexleybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
-          <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/github-logo.svg" alt="Github Logo">
-        <div class="socialText">
-          <h1 :class="{ whiteText: DarkMode }"> <Commits/>+ Commits</h1>
-          <p :class="{ whiteText: DarkMode }"> in a year and counting.</p>
-        </div>
-      </a>
-      <a href="https://www.linkedin.com/in/alexleybourne/" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
-        <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/linkedin.svg" alt="Linkedin Logo">
-        <div class="socialText">
-          <h1 :class="{ whiteText: DarkMode }"> Lets Connect </h1>
-          <p :class="{ whiteText: DarkMode }"> Come say hello. </p>
-        </div>
-      </a>
-    </div>
+    <Socials :DarkMode="DarkMode" />
   </div>
-  </div>
+</div>
 </template>
 
 <script>
-const Commits = () => import("@/components/Commits.vue");
-const DaysOfCode = () => import("@/components/DaysOfCode.vue");
+
+const Socials = () => import("@/components/Socials.vue");
 export default {
   name: 'Home',
   components: {
-    Commits,
-    DaysOfCode,
+    Socials,
   },
   data() {
     return {
       DarkMode: false,
+      PageLoaded: false,
     }
   },
   methods: {
@@ -64,216 +47,23 @@ export default {
       } else {
         this.DarkMode = true
       }
+    },
+    Loaded(){
+      window.addEventListener('load', (event) => {
+        console.log('page is fully loaded')
+        this.PageLoaded = true
+      })
     }
   },
   mounted() {
     this.TimeOfDay()
+    this.Loaded()
   }
 }
 </script>
 
 <style>
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-a { 
-  color: inherit; 
-  text-decoration:none; 
-} 
-
-.darkModeButton {
-  z-index: 4;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 40px;
-  right: 40px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  transition-duration: 0.5s;
-}
-
-.darkModeButton:hover {
-  transform: scale(1.1);
-}
-
-.darkModeButton img {
-  height: auto;
-  width: 40px;
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-
-.mainCard {
-  width: 50vw;
-  min-width: 500px;
-  height: 50vh;
-  border-radius: 50px;
-}
-  
-.home {
-  background-size: fill;
-}
-
-.profileImage {
-  height: auto;
-  width: 200px;
-  border-radius: 100%;
-  margin-top: 50px;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
-}
-
-.center h1 {
-  font-size: 80px;
-  cursor: default;
-  margin: 20px;
-}
-
-.whiteText {
-  color: white;
-}
-
-.blackBG {
-  background-color: rgb(33, 36, 40);
-  transition-duration: 0.2s;
-}
-
-.whiteBG {
-  background-color: #ffff;
-  transition-duration: 0.2s;
-}
-
-.invert {
-  filter: invert(1)
-}
-
-.invertButton {
-  transform: rotate(180deg);
-  filter: invert(1)
-}
-
-.bg {
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-.socialLinks {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-}
-
-.socialSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  height: 200px;
-  width: 200px;
-  border-radius: 50px;
-  transition-duration: 0.2s;
-}
-
-.whiteCard {
-  background: #ffffff;
-  box-shadow:  20px 20px 60px #d9d9d9, 
-             -20px -20px 60px #ffffff;
-}
-
-.blackCard {
-  background: #161A1E;
-  box-shadow:  20px 20px 28px #14171b, 
-              -20px -20px 28px #181d21;
-}
-
-.whiteCardNS {
-  background: #ffffff;
-  box-shadow:  20px 20px 60px #d9d9d9, 
-             -20px -20px 60px #ffffff;
-}
-
-.blackCardNS {
-  background: #161A1E;
-  background: linear-gradient(145deg, #14171b, #181c20);
-}
-
-.socialSection:hover {
-  transform: scale(1.05);
-}
-
-.socialSection h1 {
-  margin: 4px 0 0 0;
-  font-size: 20px;
-}
-
-.socialSection p {
-  flex-direction: row;
-  font-size: 12px;
-}
-
-.socialIcon {
-  width: 70px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-@media only screen and (max-width: 700px) {
-  .socialLinks {
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
-  }
-
-  .socialSection {
-    margin: 30px;
-    width: 90vw;
-    flex-direction: row;
-  }
-
-  .socialIcon {
-    margin: 20px;
-    margin-right: 80px;
-  }
-
-  .socialText {
-    transform: translateY(10px) ;
-  }
-
-  .bg {
-    height: auto;
-  }
-
-  .mainCard {
-    width: 90vw;
-    min-width: 300px;
-    height: 60vh;
-    min-height: 600px;
-    border-radius: 50px;
-  }
-
-  .darkModeButton {
-    position: fixed;
-    top: unset;
-    bottom: 20px;
-    right: 20px;
-  }
-}
-
+  @import '../styles.css';
 </style>
+
+
