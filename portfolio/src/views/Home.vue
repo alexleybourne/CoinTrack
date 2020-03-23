@@ -1,9 +1,9 @@
 <template>
 <div class="bg" :class="{blackBG: DarkMode, whiteBG: !DarkMode}">
-  <div class="loading" :class="{visible: !PageLoaded, hidden: PageLoaded}" >
+  <div v-if="!HideLoadingScreen" class="loading" :class="{visible: !PageLoaded, hidden: PageLoaded}" >
     <img src="@/assets/loading.gif" alt="tetris loading gif">
     <p>LOADING</p>
-    </div>
+  </div>
   <div class="home">
     <div @click="ColorSwitch" class="darkModeButton" :class="{ whiteCardNS: !DarkMode, blackCardNS: DarkMode }">
       <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
@@ -12,10 +12,9 @@
       <div class="mainCard" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img src="@/assets/images/ProfileImage.jpg" alt="Profile Picture" class="profileImage" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <h1 :class="{ whiteText: DarkMode }">Hi I'm Alex</h1>
+        <p :class="{ whiteText: DarkMode }">I'm a young creative-minded Developer.</p>
       </div>
-      <br>
     </div>
-    <br>
     <Socials :DarkMode="DarkMode" />
   </div>
 </div>
@@ -51,14 +50,14 @@ export default {
     Loaded(){
       window.addEventListener('load', (event) => {
         console.log('page is fully loaded')
-        this.PageLoaded = true
+        setTimeout(this.PageLoaded = true , 10000)
       })
-    }
+    },
   },
   mounted() {
     this.TimeOfDay()
     this.Loaded()
-  }
+  },
 }
 </script>
 
