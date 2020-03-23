@@ -13,6 +13,13 @@
         <img src="@/assets/images/ProfileImage.jpg" alt="Profile Picture" class="profileImage" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <h1 :class="{ whiteText: DarkMode }">Hi I'm Alex</h1>
         <p :class="{ whiteText: DarkMode }">I'm a young creative-minded Developer.</p>
+        
+        <div class="languageIcons">
+          <div class="languageIconHolder" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
+            <img src="@/assets/icons/languages/VueJsLogo.svg" alt="Vue Logo" class="languageIcon" :class="{ invert: DarkMode }" style="transform: translateY(7px)">
+          </div>
+        </div>
+       
       </div>
     </div>
     <Socials :DarkMode="DarkMode" />
