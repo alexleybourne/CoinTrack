@@ -228,6 +228,12 @@
     transform: scale(1.1);
   }
 
+  .languageIconSpacer {
+    display: flex;
+    justify-content: center;
+    width: 15%;
+  }
+
   .tooltip .tooltiptext {
     opacity: 0;
     width: 120px;
@@ -259,8 +265,8 @@
   }
 
   .tracking-in-expand {
-    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+            animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
   }
 
 
@@ -275,6 +281,12 @@
       flex-direction: column;
       align-items: center;
       margin: 50px;
+    }
+
+    .languageIconSpacer {
+      display: flex;
+      justify-content: center;
+      width: 25%;
     }
   
     .socialSection {
@@ -315,6 +327,16 @@
     .hidden {
         opacity: 0 !important;
     }
+  }
+
+  @media only screen and (max-width: 500px) {
+
+    .languageIconSpacer {
+      display: flex;
+      justify-content: center;
+      width: 35%;
+    }
+
   }
 
   @keyframes rotation {
