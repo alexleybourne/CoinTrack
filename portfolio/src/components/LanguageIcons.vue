@@ -20,6 +20,7 @@ export default {
                 {title: 'Javascript', file: 'JavascriptLogo.svg'},
                 {title: 'Node Js', file: 'NodeJsLogo.svg'},
                 {title: 'Ruby', file: 'RubyLogo.svg'},
+                {title: 'Rails', file: 'RubyOnRailsLogo.svg'},
                 {title: 'HTML', file: 'Html5Logo.svg'},
                 {title: 'CSS', file: 'CSS3Logo.svg'},
                 {title: 'Sass', file: 'SassLogo.svg'},

@@ -4,10 +4,10 @@
     <img src="@/assets/loading.gif" alt="tetris loading gif">
     <p>LOADING</p>
   </div>
+  <div @click="ColorSwitch" class="darkModeButton" :class="{ whiteCardNS: !DarkMode, blackCardNS: DarkMode }">
+    <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
+  </div>
   <div class="home">
-    <div @click="ColorSwitch" class="darkModeButton" :class="{ whiteCardNS: !DarkMode, blackCardNS: DarkMode }">
-      <img :class="{ invertButton: DarkMode }" src="@/assets/icons/DarkMode.svg" alt="Dark Mode Toggle">
-    </div>
     <div class="center">
       <div class="mainCard" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img src="@/assets/images/ProfileImage.jpg" alt="Profile Picture" class="profileImage jello" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
