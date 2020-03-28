@@ -2,7 +2,7 @@
         <div class="languageIcons">
           <div class="languageIconSpacer" v-for="icon in icons" :key="icon.title" >
             <div class="languageIconHolder tooltip" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
-              <img :src="require('@/assets/icons/languages/' + icon.file)" :alt="icon.title" class="languageIcon" :class="[{ invert: DarkMode }, icon.animation ? icon.animation : 'jello']">
+              <img :src="require('@/assets/icons/languages/' + icon.file)" :alt="icon.title" class="languageIcon" :class="[{ invert: DarkMode }, icon.animation ? icon.animation : 'spin']">
               <span class="tooltiptext" :class="{ invert: DarkMode }" >{{icon.title}}</span>
             </div>
           </div> 
@@ -15,9 +15,9 @@ export default {
     data() {
         return {
             icons: [
-                {title: 'React', file: 'VueJsLogo.svg'},
+                {title: 'React', file: 'VueJsLogo.svg' },
                 {title: 'Vue', file: 'ReactLogo.svg', animation: 'react'},
-                {title: 'Javascript', file: 'JavascriptLogo.svg'},
+                {title: 'Javascript', file: 'JavascriptLogo.svg', animation: 'jello'},
                 {title: 'Node Js', file: 'NodeJsLogo.svg'},
                 {title: 'Ruby', file: 'RubyLogo.svg'},
                 {title: 'Rails', file: 'RubyOnRailsLogo.svg'},
