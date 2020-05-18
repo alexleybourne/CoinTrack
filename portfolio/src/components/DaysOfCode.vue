@@ -7,7 +7,7 @@ export default {
     name: 'DaysOfCode',
     data() {
         return {
-            number: 200,
+            number: 250,
             tweenedNumber: 100
         }
     },

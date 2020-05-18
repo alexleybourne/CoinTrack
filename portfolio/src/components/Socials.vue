@@ -3,8 +3,8 @@
       <a href="https://twitter.com/AlexLeybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
         <img class="socialIcon" :class="{ invert: DarkMode }" src="@/assets/icons/twitter.svg" alt="Twitter Logo">
         <div class="socialText">
-          <h1 :class="{ whiteText: DarkMode }"> <DaysOfCode/>+ </h1>
-          <p :class="{ whiteText: DarkMode }"> #100DaysOfCode</p>
+          <h1 :class="{ whiteText: DarkMode }"> <DaysOfCode/>+</h1>
+          <p :class="{ whiteText: DarkMode }"> #DaysOfCode</p>
         </div>
       </a>
       <a href="https://github.com/alexleybourne" target="_blank" class="socialSection" :class="{ whiteCard: !DarkMode, blackCard: DarkMode }">
