@@ -235,6 +235,7 @@
   }
 
   .tooltip .tooltiptext {
+    z-index: 10;
     opacity: 0;
     width: 120px;
     background-color: black;

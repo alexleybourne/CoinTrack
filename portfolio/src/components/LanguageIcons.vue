@@ -15,8 +15,8 @@ export default {
     data() {
         return {
             icons: [
-                {title: 'React', file: 'VueJsLogo.svg' },
-                {title: 'Vue', file: 'ReactLogo.svg', animation: 'react'},
+                {title: 'Vue', file: 'VueJsLogo.svg' },
+                {title: 'React', file: 'ReactLogo.svg', animation: 'react'},
                 {title: 'Javascript', file: 'JavascriptLogo.svg', animation: 'jello'},
                 {title: 'Node Js', file: 'NodeJsLogo.svg'},
                 {title: 'Ruby', file: 'RubyLogo.svg'},
