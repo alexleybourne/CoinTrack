@@ -109,15 +109,41 @@ html {
         }
       }
       .hero-images {
+
+        width: 50%;
+        height: 100vh;
+        position: relative;
+
         .hero-images-inner {
+
           .hero-image {
-            &.pool {
+            position: absolute;
+            overflow: hidden;
+
+            &.img2 {
+
+              top: 0;
+              right: 0;
+              width: 45%;
+              height: 50%;
 
             }
-            &.driver {
+            &.img1 {
+
+              bottom: 24px;
+              left: 0px;
+              width: 52%;
+              height: 65%;
 
             }
             img {
+
+              position: absolute;
+              top: 0;
+              right: 0;
+              left: 0;
+              bottom: 0;
+              width: 100%;
 
             }
           }

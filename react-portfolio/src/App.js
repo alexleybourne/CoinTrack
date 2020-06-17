@@ -1,7 +1,7 @@
 import React from 'react';
 import arrow from './images/arrow.svg'
-import imgPool from './images/pool.gif'
-import imgDriver from './images/driver.gif'
+import img2 from './images/img2.png'
+import img1 from './images/img1.png'
 import './App.scss';
 
 function App() {
@@ -35,11 +35,11 @@ function App() {
           </div>
           <div className="hero-images">
             <div className="hero-images-inner">
-              <div className="hero-image pool">
-                <img src={imgPool} alt="pool"/>
+              <div className="hero-image img2">
+                <img src={img2} alt="Alex Leybourne"/>
               </div>
-              <div className="hero-image driver">
-                <img src={imgDriver} alt="driver"/>
+              <div className="hero-image img1">
+                <img src={img1} alt="Alex Leybourne"/>
               </div>
             </div>
           </div>
