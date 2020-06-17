@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react';
-import {TweenMax} from 'gsap'
+import {TweenMax, TimelineLite, Power3} from 'gsap'
 
 import './App.scss';
 
@@ -12,8 +12,20 @@ import arrow from './images/arrow.svg'
 function App() {
 
   let app = useRef(null)
+  let images = useRef(null)
+
+  let tl  = new TimelineLite()
+
   useEffect(() => {
+    // IMages Vars
+    const img1 = images.firstElementChild
+    const img2 = images.lastElementChild
+
     TweenMax.to(app, 0, {css: {visibility: 'visible'}})
+
+    tl.from(img1, 1.2, {y: -1280, ease: Power3.easeOut})
+      .from(img1.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
+
   })
 
   return (
@@ -45,7 +57,7 @@ function App() {
             </div>
           </div>
           <div className="hero-images">
-            <div className="hero-images-inner">
+            <div className="hero-images-inner" ref={el => images = el}>
               <div className="hero-image img2">
                 <img src={img2} alt="Alex Leybourne"/>
               </div>
