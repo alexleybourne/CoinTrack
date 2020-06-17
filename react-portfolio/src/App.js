@@ -1,12 +1,23 @@
-import React from 'react';
-import arrow from './images/arrow.svg'
-import img2 from './images/img2.png'
-import img1 from './images/img1.png'
+import React, {useRef, useEffect} from 'react';
+import {TweenMax} from 'gsap'
+
 import './App.scss';
 
+// Assets
+import img2 from './images/img2.png'
+import img1 from './images/img1.png'
+import arrow from './images/arrow.svg'
+
+
 function App() {
+
+  let app = useRef(null)
+  useEffect(() => {
+    TweenMax.to(app, 0, {css: {visibility: 'visible'}})
+  })
+
   return (
-    <div className="hero">
+    <div className="hero" ref={el => app = el}>
       <div className="container">
         <div className="hero-inner">
           <div className="hero-content">
