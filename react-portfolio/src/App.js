@@ -6,7 +6,7 @@ import './App.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className="hero">
       <div className="container">
         <div className="hero-inner">
           <div className="hero-content">
