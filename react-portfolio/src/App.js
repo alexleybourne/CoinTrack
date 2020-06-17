@@ -13,20 +13,35 @@ function App() {
 
   let app = useRef(null)
   let images = useRef(null)
-
+  let content = useRef(null)
   let tl  = new TimelineLite()
 
   useEffect(() => {
-    // IMages Vars
+    // Images Vars
     const img1 = images.firstElementChild
     const img2 = images.lastElementChild
 
+    // Content Vars
+    const headlineFirst = content.children[0].children[0]
+    const headlineSecond = headlineFirst.nextSibling
+    const headlineThird = headlineSecond.nextSibling
+    const contentP = content.children[1]
+    const contentButton = content.children[2]
+
     TweenMax.to(app, 0, {css: {visibility: 'visible'}})
 
-    tl.from(img1, 1.2, {y: 1280, ease: Power3.easeOut})
+    // Images Animation
+    tl.from(img1, 1.2, {y: 1280, ease: Power3.easeOut}, 'Start')
       .from(img1.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
       .from(img2, 1.2, {y: 1280, ease: Power3.easeOut}, .4)
       .from(img2.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .4)
+
+    // Content Animation
+    tl.staggerFrom([headlineFirst.children, headlineSecond.children, headlineThird.children], 1, {
+      y: 44,
+      ease: Power3.easeOut,
+      delay: .8
+    }, .15, 'Start')
 
   })
 
@@ -35,7 +50,7 @@ function App() {
       <div className="container">
         <div className="hero-inner">
           <div className="hero-content">
-            <div className="hero-content-inner">
+            <div className="hero-content-inner" ref={el => content = el}>
               <h1>
                 <div className="hero-content-line">
                   <div className="hero-content-line-inner">Hello,</div>
