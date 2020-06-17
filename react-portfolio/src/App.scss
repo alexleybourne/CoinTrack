@@ -72,21 +72,34 @@ html {
               left: -68px;
             }
 
-            button {
+            .projects-button {
               
-              background-color: none;
+              background-color: transparent;
               border: none;
               font-size: 12px;
               padding: 0;
               cursor: pointer;
               text-transform: uppercase;
               font-weight: 700;
-              letter-spacing: .7px;
+              letter-spacing: 0.7px;
               display: flex;
               align-items: center;
               position: relative;
+              
+              &:focus {
+                outline: none;
+              }
 
-              arrow-icon {
+              .arrow-icon {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #007fff;
+                height: 42px;
+                width: 42px;
+                border-radius: 100px;
+                left: 80px;
 
               }
 
