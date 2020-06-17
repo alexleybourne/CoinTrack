@@ -23,8 +23,10 @@ function App() {
 
     TweenMax.to(app, 0, {css: {visibility: 'visible'}})
 
-    tl.from(img1, 1.2, {y: -1280, ease: Power3.easeOut})
+    tl.from(img1, 1.2, {y: 1280, ease: Power3.easeOut})
       .from(img1.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .2)
+      .from(img2, 1.2, {y: 1280, ease: Power3.easeOut}, .4)
+      .from(img2.firstElementChild, 2, {scale: 1.6, ease: Power3.easeOut}, .4)
 
   })
 
