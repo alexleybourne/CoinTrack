@@ -4,8 +4,8 @@ import {TweenMax, TimelineLite, Power3} from 'gsap'
 import './App.scss';
 
 // Assets
-import img2 from './images/img2.png'
-import img1 from './images/img1.png'
+import img1 from './images/img3.jpg'
+import img2 from './images/react.png'
 import arrow from './images/arrow.svg'
 
 
@@ -62,10 +62,10 @@ function App() {
                   <div className="hero-content-line-inner">I'm Alex Leybourne.</div>
                 </div>
                 <div className="hero-content-line">
-                  <div className="hero-content-line-inner">A Full Stack dev.</div>
+                  <div className="hero-content-line-inner">A Fullstack Developer.</div>
                 </div>
               </h1>
-              <p>I speak many languages including react, vue, ruby, html, scss and more.</p>
+              <p>I like to use React, Vue, Ruby, NodeJS, Firebase, Scss, html and of course Javascript. </p>
               <div className="btn-row">
                 <button className="projects-button">
                   My Work
