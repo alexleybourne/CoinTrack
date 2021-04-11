@@ -40,7 +40,7 @@
             </div>
             <div class="flex-1 px-2 mx-2 font-bold">
               <!-- navbar title -->
-              <img class="nav-logo" src="./assets/Logo.svg" alt="Coin Track Logo" />
+              <img onclick="visit('baseUrl')" class="nav-logo" src="./assets/Logo.svg" alt="Coin Track Logo" />
             </div>
             <!-- navbar is only visible for desktop -->
             <div class="flex-none hidden lg:inline-block">
@@ -61,7 +61,7 @@
                   Generates CSS using using TailwindCSS JIT and makes it production-ready using autoprefixer and cssnano.
                 </p>
               </div>
-              <a target="_blank" class="btn btn-info" href="http://127.0.0.1:5500/index.html?coin=doge">Doge Test</a>
+              <Button target="_blank" class="btn btn-info" onclick="dogeTest()">Doge Test</Button>
             </div>
             <div class="w-full max-w-md p-4 text-center">
               <!-- text -->
