@@ -1,13 +1,12 @@
-<!-- default theme 👇 -->
-<html data-theme="light">
-<!-- try other themes 👇 -->
-<!-- [dark, light, black, cyberpunk, dracula, valentine, retro, synthwave, garden, halloween, aqua, cupcake, bumblebee, pastel, forest, fantasy, luxury] -->
-<!-- more info: https://daisy.js.org/docs/default-themes -->
+<!-- default theme for DaisyUI-->
+<html data-theme="dark">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
-  <title>Tailwind + DaisyUI</title>
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" type="text/css" href="output.css" />
   <script src="https://cdn.jsdelivr.net/npm/theme-change@1.2.0/dist/select.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <body>
     <!-- put everything in a off-canvas drawer -->
     <div class="h-screen bg-base-200 drawer text-base-content">
@@ -36,7 +35,7 @@
           </div>
           <div class="flex-1 px-2 mx-2 font-bold">
             <!-- navbar title -->
-            <span>Change screen size</span>
+            <span>Crypto Track</span>
           </div>
           <div class="flex-none">
             <!-- navbar is only visible for desktop -->
@@ -50,37 +49,19 @@
                 </li>
               </ul>
             </div>
-            <select class="select" data-choose-theme>
-              <option value="">Change Theme</option>
-              <option value="dark">dark</option>
-              <option value="light">light</option>
-              <option value="black">black</option>
-              <option value="cyberpunk">cyberpunk</option>
-              <option value="dracula">dracula</option>
-              <option value="valentine">valentine</option>
-              <option value="retro">retro</option>
-              <option value="synthwave">synthwave</option>
-              <option value="garden">garden</option>
-              <option value="halloween">halloween</option>
-              <option value="aqua">aqua</option>
-              <option value="cupcake">cupcake</option>
-              <option value="bumblebee">bumblebee</option>
-              <option value="pastel">pastel</option>
-              <option value="forest">forest</option>
-              <option value="fantasy">fantasy</option>
-              <option value="luxury">luxury</option>
-            </select>
+            <label>
+              Night
+              <select class="select" data-choose-theme>
+                <option value="auto">Auto 🤖</option>
+                <option value="dark">Dark 🌑</option>
+                <option value="light">Light 💡 </option>
+              </select>
+            </label>
           </div>
         </div>
         <!-- main content -->
         <div class="grid flex-grow place-content-center">
           <div class="w-full max-w-md p-4 text-center">
-            <!-- avatar -->
-            <div class="mx-auto avatar">
-              <div class="w-32 h-32 p-1 mb-8 mask mask-squircle bg-secondary">
-                <img src="https://i.pravatar.cc/128?img=54" class="mask mask-squircle" />
-              </div>
-            </div>
             <!-- text -->
             <div class="pb-3">
               <h1 class="py-2 text-2xl font-bold">TailwindCSS + DaisyUI</h1>
@@ -88,7 +69,7 @@
                 Generates CSS using using TailwindCSS JIT and makes it production-ready using autoprefixer and cssnano.
               </p>
             </div>
-            <a target="_blank" class="btn btn-primary" href="https://daisy.js.org/">See all components</a>
+            <a target="_blank" class="btn btn-info" href="https://daisy.js.org/">See all components</a>
           </div>
         </div>
       </div>
@@ -100,7 +81,7 @@
             <a target="_blank" href="https://tailwindcss.com/">TailwindCSS</a>
           </li>
           <li>
-            <a target="_blank" href="https://daisy.js.org/">DaisyUI</a>
+            <a target="_blank" href="https://daisy.js.org/">Github Repo</a>
           </li>
         </ul>
       </div>

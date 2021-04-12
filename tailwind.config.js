@@ -6,7 +6,7 @@ module.exports = {
   ],
   daisyui: {
     styled: true, // set false if you only need the skeleton of components
-    themes: true, // set false if you dont need DaisyUI themes
+    themes: true, // set false if you don't need DaisyUI themes
     rtl: false, // set true if your <body> has dir="rtl"
   },
   plugins: [
