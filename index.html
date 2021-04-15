@@ -1,5 +1,5 @@
 <!-- default theme for DaisyUI-->
-<html data-theme="auto">
+<html data-theme="dark">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -56,12 +56,32 @@
             <div class="w-full max-w-md p-4 text-center">
               <!-- text -->
               <div class="pb-3">
-                <h1 class="py-2 text-2xl font-bold">TailwindCSS + DaisyUI</h1>
+                <h1 class="py-2 text-2xl font-bold">Check Doge</h1>
                 <p class="text-sm text-opacity-70 text-base-content">
                   Generates CSS using using TailwindCSS JIT and makes it production-ready using autoprefixer and cssnano.
                 </p>
               </div>
-              <a target="_blank" class="btn btn-info" href="https://daisy.js.org/">See all components</a>
+              <a target="_blank" class="btn btn-info" href="http://127.0.0.1:5500/index.html?coin=doge">Doge Test</a>
+            </div>
+            <div class="w-full max-w-md p-4 text-center">
+              <!-- text -->
+              <div class="pb-3">
+                <h1 class="py-2 text-2xl font-bold">Params</h1>
+                <p class="text-sm text-opacity-70 text-base-content" id="coin">
+                  Current Value Found: none.
+                </p>
+              </div>
+              <Button class="btn btn-info" onclick="visit('baseUrl')">Visit Base Url</Button>
+            </div>
+            <div class="w-full max-w-md p-4 text-center">
+              <!-- text -->
+              <div class="pb-3">
+                <h1 class="py-2 text-2xl font-bold">Visit Doge Link</h1>
+                <p class="text-sm text-opacity-70 text-base-content" id="doge">
+                  Doge Value: none.
+                </p>
+              </div>
+              <Button class="btn btn-info" onclick="dogeTest()">Doge URL</Button>
             </div>
           </div>
         </div>
@@ -79,5 +99,6 @@
         </ul>
       </div>
     </div>
+    <script src="./scripts.js"></script>
   </body>
 </html>
