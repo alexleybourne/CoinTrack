@@ -1,15 +1,15 @@
 <!-- default theme for DaisyUI-->
-<html data-theme="dark">
+<html data-theme="auto">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+  <link rel="manifest" href="./favicon/site.webmanifest">
   <title>CryptoTrack</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" type="text/css" href="output.css" />
-  <script src="https://cdn.jsdelivr.net/npm/theme-change@1.2.0/dist/select.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.1/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <body>
     <!-- put everything in a off-canvas drawer -->
@@ -18,62 +18,51 @@
       <input id="menu-drawer" type="checkbox" class="drawer-toggle" />
       <div class="flex flex-col drawer-content">
         <!-- drawer content -->
-        <div class="w-full navbar bg-base-300">
-          <!-- hamburger menu is only visible on mobile -->
-          <div class="flex-none lg:hidden">
-            <label for="menu-drawer" class="btn btn-square btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 stroke-current"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
-            </label>
-          </div>
-          <div class="flex-1 px-2 mx-2 font-bold">
-            <!-- navbar title -->
-            <span>Crypto Track</span>
-          </div>
-          <div class="flex-none">
+        <div class="grid grid-cols-1 gap-6 lg:p-10 xl:grid-cols-3 lg:bg-base-200 rounded-box">
+          <div class="navbar col-span-1 shadow-lg xl:col-span-3 bg-neutral-focus text-neutral-content rounded-box">
+            <!-- hamburger menu is only visible on mobile -->
+            <div class="flex-none lg:hidden">
+              <label for="menu-drawer" class="btn btn-square btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="inline-block w-6 h-6 stroke-current"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </label>
+            </div>
+            <div class="flex-1 px-2 mx-2 font-bold">
+              <!-- navbar title -->
+              <img class="nav-logo" src="./assets/Logo.svg" alt="Coin Track Logo" />
+            </div>
             <!-- navbar is only visible for desktop -->
-            <div class="hidden lg:inline-block">
-              <ul class="mr-2 space-x-2 menu horizontal">
-                <li>
-                  <a target="_blank" href="https://tailwindcss.com/" class="rounded-btn">TailwindCSS</a>
-                </li>
-                <li>
-                  <a target="_blank" href="https://daisy.js.org/" class="rounded-btn">DaisyUI</a>
-                </li>
-              </ul>
+            <div class="flex-none hidden lg:inline-block">
+              <Button data-toggle-theme="light,auto" class="btn btn-info">
+                <div class="emoji-button">
+                  <span>💡</span>
+                </div>
+              </Button>
             </div>
-            <label>
-              Night
-              <select class="select" data-choose-theme>
-                <option value="auto">Auto 🤖</option>
-                <option value="dark">Dark 🌑</option>
-                <option value="light">Light 💡 </option>
-              </select>
-            </label>
           </div>
-        </div>
         <!-- main content -->
-        <div class="grid flex-grow place-content-center">
-          <div class="w-full max-w-md p-4 text-center">
-            <!-- text -->
-            <div class="pb-3">
-              <h1 class="py-2 text-2xl font-bold">TailwindCSS + DaisyUI</h1>
-              <p class="text-sm text-opacity-70 text-base-content">
-                Generates CSS using using TailwindCSS JIT and makes it production-ready using autoprefixer and cssnano.
-              </p>
+          <div class="grid flex-grow place-content-center">
+            <div class="w-full max-w-md p-4 text-center">
+              <!-- text -->
+              <div class="pb-3">
+                <h1 class="py-2 text-2xl font-bold">TailwindCSS + DaisyUI</h1>
+                <p class="text-sm text-opacity-70 text-base-content">
+                  Generates CSS using using TailwindCSS JIT and makes it production-ready using autoprefixer and cssnano.
+                </p>
+              </div>
+              <a target="_blank" class="btn btn-info" href="https://daisy.js.org/">See all components</a>
             </div>
-            <a target="_blank" class="btn btn-info" href="https://daisy.js.org/">See all components</a>
           </div>
         </div>
       </div>
@@ -82,10 +71,10 @@
         <label for="menu-drawer" class="drawer-overlay"></label>
         <ul class="p-4 overflow-y-auto menu w-80 bg-base-100">
           <li>
-            <a target="_blank" href="https://tailwindcss.com/">TailwindCSS</a>
+            <a target="_blank" href="#">Github</a>
           </li>
           <li>
-            <a target="_blank" href="https://daisy.js.org/">Github Repo</a>
+            <a target="_blank" href="#">Coinbase</a>
           </li>
         </ul>
       </div>

@@ -1,0 +1,28 @@
+.navbar {
+    img {
+        height: 24px;
+    }
+}
+
+$blue: #3B95FF;
+$blue-darker: #367ed0;
+
+.blue-outline {
+    border: 2px solid $blue !important;
+    color: $blue;
+
+    &:hover {
+        background: $blue !important;
+        color: white;
+    }
+}
+
+.blue {
+    background: $blue !important;
+
+    &:hover {
+        background: $blue-darker !important;
+    }
+
+}
+

@@ -1,1 +1,22 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+.navbar img {
+  height: 24px;
+}
+
+.blue-outline {
+  border: 2px solid #3B95FF !important;
+  color: #3B95FF;
+}
+
+.blue-outline:hover {
+  background: #3B95FF !important;
+  color: white;
+}
+
+.blue {
+  background: #3B95FF !important;
+}
+
+.blue:hover {
+  background: #367ed0 !important;
+}
+/*# sourceMappingURL=styles.css.map */
