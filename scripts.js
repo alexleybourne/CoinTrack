@@ -3,12 +3,22 @@ const baseUrl = window.location.href.includes('127.0.0.1:5500') ? "http://127.0.
 
 const testData = {coins: ['doge', 'btc'], name: 'alex'}
 
+let currency = 'USD' // default currency
+
 window.onload = function() {
     console.log('⚡️ LOADED! ⚡️');
     console.log('PARAMS: ',getUrlParam('coins'));
     console.log('GET VARS: ', getUrlVars());
     console.log('URL', window.location.href.includes('127.0.0.1:5500'));
+    getCurrency();
 };
+
+const getCurrency = async() => {
+    const data = await fetchUrl('https://ipapi.co/json/')
+    console.log('IP DATA:', await data);
+    currency = data.currency;
+    console.log(currency);
+}
 
 const getUrlParam = (param) => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -58,5 +68,12 @@ const getUrlVars = () => {
 
 const visit = (val) => {
     if (val.includes('baseUrl')) { window.location.href = baseUrl }
+}
+
+const fetchUrl = async(url) => {
+    const promise = await fetch(url);
+    const data = await promise.json();
+    console.log(data);
+    return data;
 }
 
