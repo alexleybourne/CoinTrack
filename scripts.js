@@ -14,6 +14,8 @@ window.onload = function() {
     console.log('URL', window.location.href.includes('127.0.0.1:5500'));
     getCurrency();
     fetchGecko('ping');
+    getTrending();
+    createCards({topRisers: 5, coin: 'doge'})
 };
 
 const getCurrency = async() => {
@@ -95,5 +97,15 @@ const fetchGecko = async(url) => {
         console.log('An error has ocurred with the Coin Gecko API')
         return null
     }
+}
+
+const getTrending = async() => {
+    const response = await fetchGecko('search/trending');
+    console.log('Top Trending: ', response)
+    return response
+}
+
+const createCards = async(cards) => {
+    return 'lol'
 }
 

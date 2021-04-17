@@ -2,6 +2,8 @@
     --p: 220 94% 61% !important;
 }
 
+$light-grey: #bababa40;
+
 .navbar {
     img {
         height: 24px;
@@ -37,7 +39,7 @@
 .menu {
 
     li {
-        border: 2px solid #86868685;
+        border: 2px solid $light-grey;
         border-radius: 10px;
         margin: 10px;
     }
@@ -76,6 +78,10 @@
 
 .card-item {
 
+    h2 {
+        margin-bottom: 4px;
+    }
+
     padding: 20px;
     margin: 10px 6px;
     border: 1px solid rgba(60, 60, 60, 0.1);
@@ -87,5 +93,32 @@
 
     --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card-trending-list {
+
+    li {
+        display: flex;
+        align-items: center;
+        padding: 2px 6px;
+        margin: 6px 0;
+        border-radius: 10px;
+        width: 100%;
+        background-color: $light-grey;
+
+        img {
+            height: 20px;
+        }
+
+        span {
+            margin: 0 2px;
+        }
+
+        h2 {
+            font-weight: bold;
+            margin: 0;
+            margin-left: 2px;
+        }
+    }
 }
 
