@@ -1,9 +1,11 @@
 // Checking if testing locally
 const baseUrl = window.location.href.includes('127.0.0.1:5500') ? "http://127.0.0.1:5500/index.html" : "https://alexleybourne.github.io/CryptoTrack/"
+// Coingecko API Base url
+const coinGeckoUrl = 'https://api.coingecko.com/api/v3/'
+// Default currency
+let currency = 'USD'
 
 const testData = {coins: ['doge', 'btc'], name: 'alex'}
-
-let currency = 'USD' // default currency
 
 window.onload = function() {
     console.log('⚡️ LOADED! ⚡️');
@@ -11,7 +13,7 @@ window.onload = function() {
     console.log('GET VARS: ', getUrlVars());
     console.log('URL', window.location.href.includes('127.0.0.1:5500'));
     getCurrency();
-    
+    fetchGecko('ping');
 };
 
 const getCurrency = async() => {
@@ -73,8 +75,25 @@ const visit = (val) => {
 
 const fetchUrl = async(url) => {
     const promise = await fetch(url);
-    const data = await promise.json();
-    console.log(data);
-    return data;
+    if (promise.status == 200) {
+        const data = await promise.json();
+        console.log(data);
+        return data;
+    } else {
+        console.log('An error has ocurred')
+        return null
+    }
+}
+
+const fetchGecko = async(url) => {
+    const promise = await fetch(`${coinGeckoUrl}${url}`);
+    if (promise.status == 200) {
+        const data = await promise.json();
+        console.log(data);
+        return data;
+    } else {
+        console.log('An error has ocurred with the Coin Gecko API')
+        return null
+    }
 }
 

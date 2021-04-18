@@ -1,5 +1,5 @@
 <!-- default theme for DaisyUI-->
-<html data-theme="dark">
+<html data-theme="auto">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -22,34 +22,35 @@
           <div class="navbar col-2 shadow-lg bg-neutral-focus text-neutral-content rounded-box">
             <!-- hamburger menu is only visible on mobile -->
             <div class="flex-none">
-              <label for="menu-drawer" class="btn btn-square btn-ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  class="inline-block w-6 h-6 stroke-current"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                  ></path>
-                </svg>
-              </label>
+              
             </div>
             <div class="flex-1 px-2 mx-2 font-bold">
               <!-- navbar title -->
               <img onclick="visit('baseUrl')" class="nav-logo" src="./assets/Logo.svg" alt="Coin Track Logo" />
             </div>
             <!-- navbar is only visible for desktop -->
-            <div class="flex-none emoji-button-container">
-              <Button data-toggle-theme="light,auto" class="btn btn-ghost center">
+            <!-- <div class="flex-none emoji-button-container">
+              <Button data-toggle-theme="light,dark" class="btn btn-ghost center">
                 <div class="emoji-button center">
                 💡
                 </div>
               </Button>
-            </div>
+            </div> -->
+            <label for="menu-drawer" class="btn btn-square btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                class="inline-block w-6 h-6 stroke-current"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </label>
           </div>
         <!-- main content -->
           <div class="grid flex-grow place-content-center">
@@ -84,12 +85,12 @@
         </div>
       </div>
       <!-- drawer sidebar for mobile -->
-      <div class="drawer-side">
+      <div class="drawer-side right">
         <label for="menu-drawer" class="drawer-overlay"></label>
         <ul class="p-4 overflow-y-auto menu w-80 bg-base-100">
           <h1 class="menu-title">Menu</h1>
           <li>
-            <a target="_blank" href="https://github.com/alexleybourne/CryptoTrack" class="info">Github</a>
+            <a target="_blank" href="https://github.com/alexleybourne/CryptoTrack">Github</a>
           </li>
           <li>
             <a target="_blank" href="#">Create a dash</a>
