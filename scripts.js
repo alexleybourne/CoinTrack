@@ -11,6 +11,7 @@ window.onload = function() {
     console.log('GET VARS: ', getUrlVars());
     console.log('URL', window.location.href.includes('127.0.0.1:5500'));
     getCurrency();
+    
 };
 
 const getCurrency = async() => {
