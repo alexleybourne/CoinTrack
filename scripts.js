@@ -5,23 +5,28 @@ const coinGeckoUrl = 'https://api.coingecko.com/api/v3/'
 // Default currency
 let currency = 'USD'
 
+// Loading animation
+let loading = true
+// Errors
+let errors = ""
+
 const testData = {coins: ['doge', 'btc'], name: 'alex'}
 
-window.onload = function() {
+window.onload = async () => {
     console.log('⚡️ LOADED! ⚡️');
     console.log('PARAMS: ',getUrlParam('coins'));
     console.log('GET VARS: ', getUrlVars());
     console.log('URL', window.location.href.includes('127.0.0.1:5500'));
-    getCurrency();
-    fetchGecko('ping');
-    getTrending();
+    await getCurrency();
     createCards({topRisers: 5, coin: 'doge'})
+    await getCoinData();
+    loading = false
 };
 
 const getCurrency = async() => {
     const data = await fetchUrl('https://ipapi.co/json/')
     console.log('IP DATA:', await data);
-    currency = data.currency;
+    currency = data?.currency;
     console.log(currency);
 }
 
@@ -49,6 +54,41 @@ const constAddParam = (values, visit) => {
     }
 }
 
+const fetchUrl = async(url) => {
+    const promise = await fetch(url);
+    if (promise.status == 200) {
+        const data = await promise.json();
+        console.log(data);
+        return data;
+    } else {
+        console.log('An error has ocurred')
+        return null
+    }
+}
+
+const fetchGecko = async(url) => {
+    const promise = await fetch(`${coinGeckoUrl}${url}`);
+    if (promise.status == 200) {
+        const data = await promise.json();
+        console.log(data);
+        errors = '';
+        return data;
+    } else {
+        errors = 'An error has ocurred with the Coin Gecko API';
+        console.log(errors);
+        return null;
+    }
+}
+
+const getCoinData = async() => {
+    await fetchGecko('ping');
+    getTrending();
+    const coinsList = await fetchUrl('./coin-list.json')
+    console.log('Coins List', coinsList)
+    const top100 = await fetchGecko(`coins/markets?vs_currency=${currency}&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h%2C%2024h%2C%207d`);
+    console.log('Top 100 coins data: ', top100);
+}
+
 const dogeTest = () => {
     constAddParam(testData, true);
 }
@@ -73,30 +113,6 @@ const getUrlVars = () => {
 
 const visit = (val) => {
     if (val.includes('baseUrl')) { window.location.href = baseUrl }
-}
-
-const fetchUrl = async(url) => {
-    const promise = await fetch(url);
-    if (promise.status == 200) {
-        const data = await promise.json();
-        console.log(data);
-        return data;
-    } else {
-        console.log('An error has ocurred')
-        return null
-    }
-}
-
-const fetchGecko = async(url) => {
-    const promise = await fetch(`${coinGeckoUrl}${url}`);
-    if (promise.status == 200) {
-        const data = await promise.json();
-        console.log(data);
-        return data;
-    } else {
-        console.log('An error has ocurred with the Coin Gecko API')
-        return null
-    }
 }
 
 const getTrending = async() => {
