@@ -10,6 +10,8 @@ let loading = true
 // Errors
 let errors = ""
 
+const example = "?d=dge_trnd_"
+
 const testData = {coins: ['doge', 'btc'], name: 'alex'}
 
 window.onload = async () => {

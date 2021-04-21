@@ -6,9 +6,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
   <link rel="manifest" href="./favicon/site.webmanifest">
-  <title>CryptoTrack</title>
+  <title>CoinTrack</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" type="text/css" href="output.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
   <script src="https://cdn.jsdelivr.net/npm/theme-change@2.0.1/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <body>
@@ -63,7 +64,10 @@
             </div>
 
             <div class="card-item" id="trending-card">
-              <h2 class="card-title" id="card-title">Trending 📈</h2> 
+              <div class="card-header">
+                <h2 class="card-title" id="card-title">Trending<i class="uil uil-arrow-growth"></i></h2> 
+                <i id="card-menu" class="uil uil-ellipsis-v pointer"></i>
+              </div>
               <div class="card-trending-list">
                 <ul id="list-container">
                   <li>

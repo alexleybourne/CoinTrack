@@ -1,4 +1,4 @@
-# Crypto Track 🚀
+<img src="https://raw.githubusercontent.com/alexleybourne/CryptoTrack/19c22e1c5fc9f9be10c218ff31443c913f6db8f4/assets/Logo-Dark.svg" alt="Coin Track Logo" width="400">
 
 ---
 
@@ -6,9 +6,9 @@
 
 ![Status](https://img.shields.io/badge/Status%3A-Work%20in%20progress-yellow)
 
-The easy way to track and share all of your favorite crypto currencies 📈
+The easy way to track and share all of your favorite crypto currencies 👀
 
-With no database and using url queries only you can build and share a dash easily.
+It works with no databases, accounts by simply using url queries only. so you can build and share a dashboard super quick and easy. 😎
 
 [Visit Site ⚡️](https://alexleybourne.github.io/CryptoTrack/)
 
@@ -24,8 +24,10 @@ With no database and using url queries only you can build and share a dash easil
 - [CoinGecko API 🦎](https://www.coingecko.com/api/documentations/v3) - Used for all the Crypto data
 - [IP API 📍](https://ipapi.co/) - Used for automatically getting the users local currency
 - [Daisy UI 🌼](https://daisy.js.org/) - Provides a nice slick theme on top of Tailwind UI
+- [Unicons 🦄](https://iconscout.com/unicons) - Fantastic free icon library
 
-<details><summary>Local Install instructions 🛠</summary>
+<details>
+<summary>Local Install instructions 🛠</summary>
 
 1. Clone the project
 2. Install:

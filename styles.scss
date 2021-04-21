@@ -10,6 +10,10 @@ $light-grey: #bababa40;
     }
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -77,6 +81,19 @@ $light-grey: #bababa40;
 }
 
 .card-item {
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    i {
+        margin-left: 4px;
+        &::before {
+          font-weight: 600;
+        }
+    }
 
     h2 {
         margin-bottom: 4px;
