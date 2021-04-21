@@ -1,8 +1,15 @@
-<img src="https://raw.githubusercontent.com/alexleybourne/CryptoTrack/19c22e1c5fc9f9be10c218ff31443c913f6db8f4/assets/Logo-Dark.svg" alt="Coin Track Logo" width="400">
+<a href="#">
+    <img src="https://raw.githubusercontent.com/alexleybourne/CoinTrack/master/assets/Logo-Dark.svg" alt="Coin Track Logo" width="400">
+</a>
 
 ---
 
-![GitHub followers](https://img.shields.io/github/followers/alexleybourne?style=flat&logo=github) ![Twitter Follow](https://img.shields.io/twitter/follow/AlexLeybourne?&style=flat&logo=twitter&logoColor=white)
+<a href="https://github.com/users/follow?target=alexleybourne">
+    <img src="https://img.shields.io/github/followers/alexleybourne?style=flat&logo=github" alt="Alex Leybourne's GitHub followers" >
+</a>
+<a href="https://twitter.com/AlexLeybourne" target="_blank">
+    <img src="https://img.shields.io/twitter/follow/AlexLeybourne?&style=flat&logo=twitter&logoColor=white)" alt="Follow Alex Leybourne on Twitter">
+</a>
 
 ![Status](https://img.shields.io/badge/Status%3A-Work%20in%20progress-yellow)
 
@@ -18,6 +25,7 @@ It works with no databases, accounts by simply using url queries only. so you ca
 - Easy to use drag and drop system
 - No accounts needed
 - Makes you look 20% smarter
+- Mobile responsive
 
 ## Resources Used
 
