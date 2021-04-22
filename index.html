@@ -1,5 +1,5 @@
 <!-- default theme for DaisyUI-->
-<html data-theme="auto">
+<html data-theme="dark">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -31,26 +31,14 @@
             </div>
             <!-- navbar is only visible for desktop -->
             <div class="flex-none emoji-button-container">
-              <Button data-toggle-theme="light,dark" class="btn btn-ghost center">
+              <Button data-toggle-theme="light, dark" class="btn btn-ghost center">
                 <div class="emoji-button center">
-                💡
+                  <i class="uil uil-sun large-icon"></i>
                 </div>
               </Button>
             </div>
             <label for="menu-drawer" class="btn btn-square btn-ghost">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="inline-block w-6 h-6 stroke-current"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              <i class="uil uil-bars large-icon"></i>
             </label>
           </div>
         <!-- main content -->
@@ -65,50 +53,132 @@
 
             <div class="card-item" id="trending-card">
               <div class="card-header">
-                <h2 class="card-title" id="card-title">Trending<i class="uil uil-arrow-growth"></i></h2> 
-                <i id="card-menu" class="uil uil-ellipsis-v pointer"></i>
+                <h2 class="card-title" id="card-title">Trending<i class="uil uil-arrow-growth ml"></i></h2> 
+                <button class="btn-xs btn-square btn-ghost rounded">
+                  <i id="card-menu" class="uil uil-ellipsis-v pointer"></i>
+                </button>
               </div>
               <div class="card-trending-list">
                 <ul id="list-container">
                   <li>
-                    <p>1</p>
-                    <span>.</span>
-                    <img src="https://assets.coingecko.com/coins/images/453/large/ethereum-classic-logo.png?1547034169" alt="Etherium Classic Icon">
-                    <span class="name">Etherium Classic</span>
-                    <span>-</span>
-                    <h2>ETC</h2>
+                    <span class="position">1.</span>
+                    <div class="info-container">
+                      <div>
+                        <img src="https://assets.coingecko.com/coins/images/453/large/ethereum-classic-logo.png?1547034169" alt="Etherium Classic Icon">
+                      </div>
+                      <div class="flex-column">
+                        <div>
+                          <span class="name bold">Etherium Classic</span>
+                          <span>-</span>
+                          <span class="name-id">ETC</h2>
+                        </div>
+                        <div>
+                          <span class="price bold">$1,234</span>
+                          <span class="change center">
+                            <i class="uil uil-angle-up up"></i>
+                            <span class="percentage">12.3%</span>
+                            <span class="time">24h</span>
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </li>
                   <li>
-                    <p>2</p>
-                    <span>.</span>
-                    <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Etherium Classic Icon">
-                    <span class="name">Doge Coin</span>
-                    <span>-</span>
-                    <h2>DOGE</h2>
+                    <span class="position">2.</span>
+                    <div class="info-container">
+                      <div>
+                        <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Doge Coin Icon">
+                      </div>
+                      <div class="flex-column">
+                        <div>
+                          <span class="name bold">Doge Coin</span>
+                          <span>-</span>
+                          <span class="name-id">DOGE</h2>
+                        </div>
+                        <div>
+                          <span class="price bold">$0.64</span>
+                          <span class="change center">
+                            <i class="uil uil-angle-down down"></i>
+                            <span class="percentage">-8.3%</span>
+                            <span class="time">24h</span>
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </li>
                   <li>
-                    <p>3</p>
-                    <span>.</span>
-                    <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Etherium Classic Icon">
-                    <span class="name">Doge Coin</span>
-                    <span>-</span>
-                    <h2>DOGE</h2>
+                    <span class="position">3.</span>
+                    <div class="info-container">
+                      <div>
+                        <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Doge Coin Icon">
+                      </div>
+                      <div class="flex-column">
+                        <div>
+                          <span class="name bold">Doge Coin</span>
+                          <span>-</span>
+                          <span class="name-id">DOGE</h2>
+                        </div>
+                        <div>
+                          <span class="price bold">$0.64</span>
+                          <span class="change center">
+                            <i class="uil uil-angle-down down"></i>
+                            <span class="percentage">-8.3%</span>
+                            <span class="time">24h</span>
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </li>
                   <li>
-                    <p>4</p>
-                    <span>.</span>
-                    <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Etherium Classic Icon">
-                    <span class="name">Doge Coin</span>
-                    <span>-</span>
-                    <h2>DOGE</h2>
+                    <span class="position">4.</span>
+                    <div class="info-container">
+                      <div>
+                        <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Doge Coin Icon">
+                      </div>
+                      <div class="flex-column">
+                        <div>
+                          <span class="name bold">Doge Coin</span>
+                          <span>-</span>
+                          <span class="name-id">DOGE</h2>
+                        </div>
+                        <div>
+                          <span class="price bold">$0.64</span>
+                          <span class="change center">
+                            <i class="uil uil-angle-down down"></i>
+                            <span class="percentage">-8.3%</span>
+                            <span class="time">24h</span>
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </li>
                   <li>
-                    <p>5</p>
-                    <span>.</span>
-                    <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Etherium Classic Icon">
-                    <span class="name">Doge Coin</span>
-                    <span>-</span>
-                    <h2>DOGE</h2>
+                    <span class="position">5.</span>
+                    <div class="info-container">
+                      <div>
+                        <img src="https://assets.coingecko.com/coins/images/5/large/dogecoin.png?1547792256" alt="Doge Coin Icon">
+                      </div>
+                      <div class="flex-column">
+                        <div>
+                          <span class="name bold">Doge Coin</span>
+                          <span>-</span>
+                          <span class="name-id">DOGE</h2>
+                        </div>
+                        <div>
+                          <span class="price bold">$0.64</span>
+                          <span class="change center">
+                            <i class="uil uil-angle-down down"></i>
+                            <span class="percentage">-8.3%</span>
+                            <span class="time">24h</span>
+                          </span>
+                        </div>
+                      </div>
+                      
+                    </div>
                   </li>
                 </ul>
               </div>

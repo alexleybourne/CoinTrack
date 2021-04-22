@@ -6,6 +6,18 @@
   height: 24px;
 }
 
+.up {
+  color: #5bfb5b;
+}
+
+.down {
+  color: #ff4949;
+}
+
+.rounded {
+  border-radius: 20%;
+}
+
 .pointer {
   cursor: pointer;
 }
@@ -22,8 +34,36 @@
           align-items: center;
 }
 
+.ml {
+  margin-left: 4px;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .no-overflow {
   overflow: hidden;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.font-12 {
+  font-size: 12px;
 }
 
 .grid {
@@ -44,6 +84,14 @@
 
 .col-3 {
   grid-column: span 3 / span 3;
+}
+
+.large-icon {
+  font-size: 30px;
+}
+
+.bold-icon::before {
+  font-weight: bold;
 }
 
 .menu li {
@@ -109,16 +157,25 @@
           justify-content: space-between;
 }
 
-.card-item i {
-  margin-left: 4px;
-}
-
 .card-item i::before {
   font-weight: 600;
 }
 
 .card-item h2 {
   margin-bottom: 4px;
+}
+
+.card-trending-list .position {
+  position: absolute;
+}
+
+.card-trending-list div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card-trending-list li {
@@ -128,6 +185,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 2px 6px;
   margin: 6px 0;
   border-radius: 10px;
@@ -136,16 +196,53 @@
 }
 
 .card-trending-list li img {
-  height: 20px;
+  max-width: 40px;
+  height: auto;
 }
 
 .card-trending-list li span {
   margin: 0 2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card-trending-list li h2 {
-  font-weight: bold;
   margin: 0;
   margin-left: 2px;
+}
+
+.card-trending-list li .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: inherit;
+  padding-left: 10px;
+}
+
+.card-trending-list li .name-id {
+  font-size: 12px;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.card-trending-list li .change .percentage {
+  margin-left: -2px;
+}
+
+.card-trending-list li .change .time {
+  font-size: 10px;
+  font-weight: bold;
 }
 /*# sourceMappingURL=styles.css.map */

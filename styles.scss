@@ -3,11 +3,25 @@
 }
 
 $light-grey: #bababa40;
+$green: #5bfb5b;
+$red: #ff4949;
 
 .navbar {
     img {
         height: 24px;
     }
+}
+
+.up {
+    color: $green;
+}
+
+.down {
+    color: $red;
+}
+
+.rounded {
+    border-radius: 20%;
 }
 
 .pointer {
@@ -20,8 +34,27 @@ $light-grey: #bababa40;
     align-items: center;
 }
 
+.ml {
+    margin-left: 4px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .no-overflow {
     overflow: hidden;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-12 {
+    font-size: 12px;
 }
 
 .grid {
@@ -39,6 +72,17 @@ $light-grey: #bababa40;
 .col-3 {
     grid-column: span 3 / span 3;
 }
+
+.large-icon {
+    font-size: 30px;
+}
+
+.bold-icon {
+    &::before {
+        font-weight: bold;
+    }
+}
+
 
 .menu {
 
@@ -89,7 +133,6 @@ $light-grey: #bababa40;
     }
 
     i {
-        margin-left: 4px;
         &::before {
           font-weight: 600;
         }
@@ -114,9 +157,19 @@ $light-grey: #bababa40;
 
 .card-trending-list {
 
+    .position {
+        position: absolute;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+
     li {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         padding: 2px 6px;
         margin: 6px 0;
         border-radius: 10px;
@@ -124,18 +177,46 @@ $light-grey: #bababa40;
         background-color: $light-grey;
 
         img {
-            height: 20px;
+            max-width: 40px;
+            height: auto;
         }
 
         span {
             margin: 0 2px;
+            align-items: center;
+            justify-content: center;
         }
 
         h2 {
-            font-weight: bold;
             margin: 0;
             margin-left: 2px;
         }
+
+        .info-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            width: inherit;
+            padding-left: 10px;
+        }
+
+        .name-id {
+            font-size: 12px;
+            transform: translateY(1px);
+        }
+
+        .change {
+            .percentage {
+                margin-left: -2px;
+            }
+    
+            .time {
+                font-size: 10px;
+                font-weight: bold;
+            }
+        }
+        
     }
 }
 
