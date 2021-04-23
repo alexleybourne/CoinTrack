@@ -1,10 +1,10 @@
 <a href="#">
-    <img src="https://raw.githubusercontent.com/alexleybourne/CoinTrack/master/assets/Logo-Dark.svg" alt="Coin Track Logo" width="400">
+    <img src="https://raw.githubusercontent.com/alexleybourne/CoinTrack/master/assets/Logo-Outlined.svg" alt="Coin Track Logo" width="400">
 </a>
 
 ---
 
-<a href="https://github.com/users/follow?target=alexleybourne">
+<a href="https://github.com/alexleybourne">
     <img src="https://img.shields.io/github/followers/alexleybourne?style=flat&logo=github" alt="Alex Leybourne's GitHub followers" >
 </a>
 <a href="https://twitter.com/AlexLeybourne" target="_blank">
@@ -17,7 +17,7 @@ The easy way to track and share all of your favorite crypto currencies 👀
 
 It works with no databases, accounts by simply using url queries only. so you can build and share a dashboard super quick and easy. 😎
 
-[Visit Site ⚡️](https://alexleybourne.github.io/CryptoTrack/)
+[Visit Site ⚡️](https://alexleybourne.github.io/CoinTrack/)
 
 ## Features
 
